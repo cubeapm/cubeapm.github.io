@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cube APM | The Plug n Play APM</title>
+  <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+  <header>
+    <a href="/"><img class="logo" src="/img/logo.svg" alt="logo"/><span class="brand-name">Cube APM</span></a>
+    <nav>
+      <a href="#">Features</a>
+      <a href="#">Benchmarks</a>
+      <a href="#">Docs</a>
+      <a href="#">Pricing</a>
+      <a class="cta button" href="#">Get Started</a>
+    </nav>
+    <div class="hamburger">
+      <div class="top"></div>
+      <div class="middle"></div>
+      <div class="bottom"></div>
+    </div>
+  </header>
+  <section id="hero">
+    <h1>
+      Manage your applications<br>like a pro
+    </h1>
+    <h2>
+      Identify API performance issues in seconds<br>
+      with the APM designed for <em>ease of use</em>, <em>speed</em>, and <em>efficiency</em>.
+    </h2>
+    <div id="carousel">
+      <div class="carousel-wrapper">
+        <div class="carousel-item">
+          <img src="/img/hero.png" />
+        </div>
+        <div class="carousel-item">
+          <img src="/img/hero.png" />
+        </div>
+        <div class="carousel-item">
+          <img src="/img/hero.png" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="differentiator">
+    <h2>
+      And it runs on your infra<br>so your data does not have to go round tripping!
+    </h2>
+    <div class="cta">
+      <a href="#"><span>See Cube in Action</span></a>
+    </div>
+  </section>
+  <section id="features">
+    <div class="item">
+      <img src="/img/graphic1.svg"/>
+      <div class="content">
+        <h2 class="title">
+          Great UX
+        </h2>
+        <div class="text">
+          Highly intuitive, so you can find relevant information quickly and fix issues fast. Easy to learn even for newcomers, so no need to spend hours struggling with documentation or watching tutorial videos.
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="/img/graphic2.svg"/>
+      <div class="content">
+        <h2 class="title">
+          Love for speed
+        </h2>
+        <div class="text">
+          Designed from the ground up for speed so that there's minimal latency between you and actionable information. Uses intelligent algorithms to crunch data and derive actionable metrics quickly. Can comfortably operate at sub-second update frequency!
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="/img/graphic3.svg"/>
+      <div class="content">
+        <h2 class="title">
+          High efficiency
+        </h2>
+        <div class="text">
+          Cube uses smart sampling <!--and dynamic retention--> to identify and retain important events while discarding a large number of normal events. Cube can process gigabytes of data per minute on a single node! See <a href="#">benchmarks</a> for more details.
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="/img/opentelemetry-stacked-color.svg"/>
+      <div class="content">
+        <h2 class="title">
+          OTel Native
+        </h2>
+        <div class="text">
+          Compliant with OpenTelemetry so that you can take full advantage of the rich ecosystem of components.
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="faqs">
+    <h2 class="title">Frequently<br>Asked<br>Questions</h2>
+    <div class="content">
+      <div class="item">
+        <span class="icon"></span>
+        <div class="question">
+          How does Cube compare to Grafana / DataDog?
+        </div>
+        <div class="answer">
+          <p>
+            Grafana and DataDog are general purpose observability platforms, whereas Cube is focused on being a great APM and does not cover logs, infra metrics, etc.
+          </p>
+          <p>
+            Cube provides a significantly better out-of-the-box APM experience than Grafana, and unlike DataDog you can run Cube on your infrastructure.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <span class="icon"></span>
+        <div class="question">
+          What is Smart Sampling?
+        </div>
+        <div class="answer">
+          <p>
+            Cube processes request traces to generate application performance information. Traces, by their very nature, are generated in large volumes, and not all traces are equally useful. Popular observability platforms either store all traces data (downside: hugely increased cost) or do random sampling at the edge (downside: loss of information).
+          </p>
+          <p>
+            Cube process all traces in memory to generate key information and then discards most of the traces, only retaining the ones which may be useful for further analysis (e.g. high latency cases). Thus aggregate metrics are computed over all traces (advantage: aggregate metrics present true picture and are also comparable over time) and a useful subset of traces is retained for deeper analysis.
+          </p>
+          <p>
+            The key difference between random sampling and Cube's Smart Sampling is that Smart Sampling takes into account richer information like latency while making sampling decisions and hence produces a significantly higher signal to noise ratio in sampling. This enables Cube to handle higher incoming traffic while consuming lesser resources.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <span class="icon"></span>
+        <div class="question">
+          What's the easiest way to try Cube?
+        </div>
+        <div class="answer">
+          <p>
+            First, you can explore the interactive <a href="#">Cube Playground</a> to get a feel of the platform.
+          <p>
+          <p>
+            To try Cube on your infrastructure, head on to the <a href="#">installation</a> page for guidance. Cube plays fully well with OpenTelemetry, so if you already have OpenTelemetry setup, you can try Cube alongside your current setup without disrupting the current setup in any way. Follow <a href="#">integrate Cube with existing OTel setup</a> for setup instructions.
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    &copy; 2023 Spyk AI
+  </footer>
+  <script>
+    document.querySelector('header .hamburger').onclick = (e => {
+      document.querySelector('header').classList.toggle('visible');
+    });
+    document.querySelectorAll('#faqs .item .icon').forEach(it => { it.onclick = (e => {
+      e.target.parentElement.classList.toggle('visible');
+    }); });
+  </script>
+</body>
+</html>
