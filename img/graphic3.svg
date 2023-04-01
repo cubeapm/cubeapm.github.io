@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<svg viewBox="0 0 48 36" xmlns="http://www.w3.org/2000/svg">
-	<rect width="48" height="36" fill="#fff" />
-	<path d="M3 4.5h12m3 0h12m3 0h12M3 7.5h12m3 0h12m3 0h12" stroke-width="2" stroke="#ff641a33" fill="transparent"/>
-	<path d="M3 10.5h12m3 0h12m3 0h12M3 13.5h12m3 0h12m3 0h12M3 16.5h12m3 0h12m3 0h12M3 19.5h12m3 0h12m3 0h12" stroke-width="2" stroke="#ff900022" fill="transparent"/>
-	<path d="M3 22.5h12m3 0h12m3 0h12M3 25.5h12m3 0h12m3 0h12M3 28.5h12m3 0h12m3 0h12M3 31.5h12m3 0h12m3 0h12" stroke-width="2" stroke="#27ae6022" fill="transparent"/>
-	<path d="M18 25.5h12M3 28.5h12m3 0h12m3 0h12M3 31.5h12m3 0h12m3 0h12" stroke-width="2" stroke="#27ae60" fill="transparent"/>
-</svg>
