@@ -7,8 +7,6 @@ tags: [go, autoinstrumentation] # TAG names should always be lowercase
 
 OpenTelemetry can be used to generate telemetry data from your Go applications. The collected data can then be sent to an observability tool for storage and visualization. OpenTelemetry is an open-source project under the Cloud Native Computing Foundation ([CNCF](https://www.cncf.io/)) that aims to standardize the generation and collection of telemetry data.
 
-![Cover Image](/assets/images/opentelemetry_go_cover-66200c7c499d3e0f02c556e6b6690526.webp)
-
 In this tutorial, we will use OpenTelemetry Go libraries to instrument a Go application and then visualize it using an open-source observability tool - [CubeApm](https://CubeApm.io/).
 
 Steps to get started with OpenTelemetry for Go applications:
@@ -30,11 +28,7 @@ The install script automatically installs Docker Engine on Linux. However, on ma
 
 You can visit our documentation for instructions on how to install CubeApm using Docker Swarm and Helm Charts.
 
-[![Deployment Docs](/assets/images/deploy_docker_documentation-bec1da231907864909603a1bf9062b90.webp)](https://CubeApm.io/docs/install/docker/?utm_source=blog&utm_medium=opentelemetry_go)
-
 When you are done installing CubeApm, you can access the UI at [http://localhost:3301](http://localhost:3301/application)
-
-![CubeApm dashboard](/img/blog/common/CubeApm_dashboard_homepage.webp)
 
 _CubeApm dashboard - It shows services from a sample app that comes bundled with the application_
 
@@ -234,13 +228,9 @@ You can then navigate to [http://localhost:3301/application](http://localhost:33
 
 Go to `Metrics`→ `goGinApp`→ you will be able to see the dashboard.
 
-![Gin app being monitored on CubeApm dashboard](/img/blog/2022/04/goginapp_CubeApm_dashboard.webp)
-
 _Your Go Gin application being monitored on the CubeApm dashboard_
 
 You can monitor application metrics like application latency, requests per second, error percentage, etc. with the `Metrics` tab of CubeApm.
-
-![OpenTelemetry Gin application metrics](/img/blog/2022/04/gin_application_metrics.webp)
 
 _You can monitor your Go Gin application metrics like application latency, requests per second, error percentage, etc._
 
@@ -248,13 +238,9 @@ OpenTelemetry captures tracing data from your Gin application as well. Tracing d
 
 In the `Traces` tab of CubeApm, you can analyze the tracing data using filters based on tags, status codes, service names, operations, etc.
 
-![OpenTelemetry Gin application traces](/img/blog/2022/04/gin_application_traces.webp)
-
 _Use powerful filters to analyze your tracing data from the Gin application_
 
 You can also visualize your tracing data with the help of flamegraphs and Gantt charts.
-
-![Visualize your tracing data with the help of flamegraphs and gantt charts](/img/blog/2022/04/gin_application_flamegraph.webp)
 
 _Flamegraphs and Gantt charts on CubeApm dashboard_
 

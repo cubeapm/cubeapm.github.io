@@ -24,13 +24,9 @@ You can get started with CubeApm using just three commands at your terminal.
 
 For detailed instructions, you can visit our documentation.
 
-[![Deployment Docs](/assets/images/deploy_docker_documentation-bec1da231907864909603a1bf9062b90.webp)](https://CubeApm.io/docs/install/docker/?utm_source=blog&utm_medium=opentelemetry_tomcat)
-
 We have installed CubeApm on a Ubuntu VM in Azure cloud. You can access CubeApm UI at `http://IP_of_CubeApm:3301`. You can access CubeApm UI at port: 3301 of any host that you choose. In case of local host just use: `http://localhost:3301`
 
 The application list shown in the dashboard is from a sample app called HOT R.O.D that comes bundled with the CubeApm installation package.
-
-![CubeApm dashboard showing application list](/img/blog/2021/08/openetelemetry_tomcat_CubeApm_dashboard.png)
 
 CubeApm Dashboard
 
@@ -41,7 +37,7 @@ Make sure you have Tomcat installed on your system. If not, then you can downloa
 
 ### Steps to install sample Tomcat Java application:[​](#steps-to-install-sample-tomcat-java-application "Direct link to Steps to install sample Tomcat Java application:")
 
-- Download an example app packaged as a war file provided at Apache Tomcat official website - [Sample Tomcat app](https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/) ![Sample applicationlink](/assets/images/opentelemetry_tomcat_sample_app-min-c88e0b06ffa827fd8dd3b50bf0c016c3.png)
+- Download an example app packaged as a war file provided at Apache Tomcat official website - [Sample Tomcat app](https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/)
 - The easiest way to run the sample app is to move it to webapps folder inside the Tomcat directory.
 
       cd Tomcat/webappscp ~/Downloads/sample.war .
@@ -51,8 +47,6 @@ Make sure you have Tomcat installed on your system. If not, then you can downloa
       cd ..bin/startup.sh
 
 - Check if the sample app is running at: http://localhost:8080/sample/ . The sample should open up like below.
-
-  ![Sample app running](/assets/images/opentelemetry_tomcat_sample_app-min-c88e0b06ffa827fd8dd3b50bf0c016c3.png)
 
   By clicking on the links shown on the page, you can see that it makes dummy calls to a page as part of the Hello World application.
 
@@ -84,8 +78,6 @@ OpenTelemetry has a very handy Java JAR agent that can be attached to any Java 8
 
     Below you can find your `Tomcat-CubeApm` app in the list of applications being monitored.
 
-    ![Tomcat shows up in the list of applications monitored by CubeApm](/img/blog/2021/08/opentelemetry_tomcat_ui.png)
-
     Tomcat-CubeApm shows up in the list of applications monitored by CubeApm
 
 ## Metrics and Traces of the Tomcat Java Application[​](#metrics-and-traces-of-the-tomcat-java-application "Direct link to Metrics and Traces of the Tomcat Java Application")
@@ -98,19 +90,13 @@ CubeApm comes with out of box RED metrics charts and visualization. RED metrics 
 - Error rate of requests
 - Duration taken by requests
 
-![CubeApm UI showing charts](/img/blog/2021/08/opentelemetry_tomcat_CubeApm_charts.png)
-
 CubeApm UI showing popular RED metrics of application performance
 
 You can then choose a particular timestamp where latency is high to drill down to traces around that timestamp.
 
-![View of traces at a particular timestamp](/img/blog/2021/08/opentelemetry_regex.png)
-
 View of traces at a particular timestamp
 
 You can use flamegraphs to identify the issue causing the latency.
-
-![Flamegraphs](/img/blog/2021/08/opentelemetry_tomcat_flamegraphs.png)
 
 Flamegraphs used for distributed tracing in CubeApm dashboard
 

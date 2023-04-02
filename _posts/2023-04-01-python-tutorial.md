@@ -31,13 +31,9 @@ You can get started with CubeApm using just three commands at your terminal.
 
 For detailed instructions, you can visit our documentation.
 
-[![Deployment Docs](/assets/images/deploy_docker_documentation-bec1da231907864909603a1bf9062b90.webp)](https://CubeApm.io/docs/install/docker/?utm_source=blog&utm_medium=opentelemetry_python)
-
 When you are done installing CubeApm, you can access the UI at: `http://localhost:3301`
 
 The application list shown in the dashboard is from a sample app called HOT R.O.D that comes bundled with the CubeApm installation package.
-
-![CubeApm dashboard](/img/blog/common/CubeApm_dashboard_homepage.png)
 
 _CubeApm dashboard_
 
@@ -60,8 +56,6 @@ _CubeApm dashboard_
 
     On MacOS the installation is done using Homebrew's brew package manager. Once the installation is done, don't forget to start MongoDB services using `brew services start mongodb/brew/mongodb-community@4.4`  on your macOS terminal.
 
-    ![starting mongoDB services from mac terminal](/img/blog/2021/08/opentelemetry_python_start_mongodb.png)
-
     _starting mongoDB services from mac terminal_
 
 ### Steps to get the Python app up and running[​](#steps-to-get-the-python-app-up-and-running "Direct link to Steps to get the Python app up and running")
@@ -74,13 +68,9 @@ _CubeApm dashboard_
 
         python3 app.py
 
-![mac terminal commands for running a python app](/img/blog/2021/08/opentelemetry_python_python_app_terminal.png)
-
 _mac terminal commands for running a python app_
 
 You can now access the UI of the app on your local host: http://localhost:5002/
-
-![Python app UI](/img/blog/2021/08/python_app_ui.png)
 
 _Python app UI_
 
@@ -124,8 +114,6 @@ _Python app UI_
 
     And, congratulations! You have instrumented your sample Python app. You can now access the CubeApm dashboard at [http://localhost:3301](http://localhost:3301/) to monitor your app for performance metrics.
 
-![CubeApm dashboard showing python app in its list of applications](/img/blog/2021/08/opentelemetry_python_dashboard.png)
-
 _CubeApm dashboard showing python app in its list of applications_
 
 ## Metrics and Traces of the Python application[​](#metrics-and-traces-of-the-python-application "Direct link to Metrics and Traces of the Python application")
@@ -138,19 +126,13 @@ CubeApm comes with out of box RED metrics charts and visualization. RED metrics 
 - Error rate of requests
 - Duration taken by requests
 
-![CubeApm dashboard showing the popular RED metrics for application performance monitoring](/img/blog/common/CubeApm_charts_application_metrics.png)
-
 _CubeApm dashboard showing the popular RED metrics for application performance monitoring_
 
 You can then choose a particular timestamp where latency is high to drill down to traces around that timestamp.
 
-![See traces, and apply powerful filters on trace data](/img/blog/common/CubeApm_list_of_traces_hc.png)
-
 _View of traces at a particular timestamp_
 
 You can use flamegraphs to exactly identify the issue causing the latency.
-
-![Flamegraphs for distributed tracing](/img/blog/common/CubeApm_flamegraphs.png)
 
 _Flamegraphs showing exact duration taken by each spans - a concept of distributed tracing_
 

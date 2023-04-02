@@ -125,8 +125,6 @@ You can check your application running at [http://localhost:5555/](http://localh
 
 And, congratulations! You have instrumented your sample Node.js app. You can now access the CubeApm dashboard at [http://localhost:3301](http://localhost:3301) to monitor your app for performance metrics.
 
-![Sample nodejs app in the applications monitored](/img/blog/2022/01/node_sample_app.webp)
-
 _Sample_app in the list of applications monitored_
 
 ## Metrics, Traces and Logs of the Nodejs application[​](#metrics-traces-and-logs-of-the-nodejs-application "Direct link to Metrics, Traces and Logs of the Nodejs application")
@@ -139,25 +137,17 @@ CubeApm comes with out of box RED metrics charts and visualization. RED metrics 
 - Error rate of requests
 - Duration taken by requests
 
-![Sample nodejs app in the applications monitored](/img/blog/common/signoz_charts_application_metrics.png)
-
 _Measure things like application latency, requests per sec, error percentage and see your top endpoints_
 
 You can then choose a particular timestamp where latency is high to drill down to traces around that timestamp.
-
-![See traces, and apply powerful filters on trace data](/img/blog/common/signoz_list_of_traces_hc.png)
 
 _View of traces at a particular timestamp_
 
 You can use flamegraphs to exactly identify the issue causing the latency.
 
-![Flamegraphs for distributed tracing](/img/blog/common/signoz_flamegraphs.png)
-
 _Flamegraphs showing exact duration taken by each spans - a concept of distributed tracing_
 
 You can also use CubeApm for log management. For Nodejs applications, you can use the [winston logger](https://signoz.io/blog/winston-logger/) to send logs to CubeApm.
-
-![Logs management in CubeApm](/img/blog/common/signoz_logs.webp)
 
 _Logs management in CubeApm_
 
