@@ -1,33 +1,33 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://localhost:4000/docs/</id>
+  <id>https://cubeapm.github.io/</id>
   <title>CubeAPM</title>
   <subtitle>A minimal, easy to setup and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2023-04-04T14:57:34+05:30</updated>
+  <updated>2023-04-04T15:00:57+05:30</updated>
   <author>
     <name>CubeAPM</name>
-    <uri>http://localhost:4000/docs/</uri>
+    <uri>https://cubeapm.github.io/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="http://localhost:4000/docs/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="https://cubeapm.github.io/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="http://localhost:4000/docs/"/>
+    href="https://cubeapm.github.io/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
   <rights> © 2023 CubeAPM </rights>
-  <icon>/docs/assets/img/favicons/favicon.ico</icon>
-  <logo>/docs/assets/img/favicons/favicon-96x96.png</logo>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
 
   
   <entry>
     <title>OpenTelemetry Python | Tutorial with a sample Python app instrumentation</title>
-    <link href="http://localhost:4000/docs/posts/python-tutorial/" rel="alternate" type="text/html" title="OpenTelemetry Python | Tutorial with a sample Python app instrumentation" />
+    <link href="https://cubeapm.github.io/posts/python-tutorial/" rel="alternate" type="text/html" title="OpenTelemetry Python | Tutorial with a sample Python app instrumentation" />
     <published>2023-04-01T00:00:00+05:30</published>
   
     <updated>2023-04-02T18:27:15+05:30</updated>
   
-    <id>http://localhost:4000/docs/posts/python-tutorial/</id>
-    <content src="http://localhost:4000/docs/posts/python-tutorial/" />
+    <id>https://cubeapm.github.io/posts/python-tutorial/</id>
+    <content src="https://cubeapm.github.io/posts/python-tutorial/" />
     <author>
       <name>CubeAPM</name>
     </author>
@@ -61,13 +61,13 @@ OpenTelemetry emerged as a single project after the merging of OpenCensus(from G
   
   <entry>
     <title>OpenTelemetry Nodejs | Tutorial with a sample Nodejs app instrumentation</title>
-    <link href="http://localhost:4000/docs/posts/node-tutorial/" rel="alternate" type="text/html" title="OpenTelemetry Nodejs | Tutorial with a sample Nodejs app instrumentation" />
+    <link href="https://cubeapm.github.io/posts/node-tutorial/" rel="alternate" type="text/html" title="OpenTelemetry Nodejs | Tutorial with a sample Nodejs app instrumentation" />
     <published>2023-04-01T00:00:00+05:30</published>
   
     <updated>2023-04-02T18:27:15+05:30</updated>
   
-    <id>http://localhost:4000/docs/posts/node-tutorial/</id>
-    <content src="http://localhost:4000/docs/posts/node-tutorial/" />
+    <id>https://cubeapm.github.io/posts/node-tutorial/</id>
+    <content src="https://cubeapm.github.io/posts/node-tutorial/" />
     <author>
       <name>CubeAPM</name>
     </author>
@@ -101,13 +101,13 @@ You need to ensure that you have Node.js version 12 or newer. You can download t
   
   <entry>
     <title>OpenTelemetry Java | Tutorial with a sample Java app instrumentation</title>
-    <link href="http://localhost:4000/docs/posts/java-tutorial/" rel="alternate" type="text/html" title="OpenTelemetry Java | Tutorial with a sample Java app instrumentation" />
+    <link href="https://cubeapm.github.io/posts/java-tutorial/" rel="alternate" type="text/html" title="OpenTelemetry Java | Tutorial with a sample Java app instrumentation" />
     <published>2023-04-01T00:00:00+05:30</published>
   
     <updated>2023-04-02T18:27:15+05:30</updated>
   
-    <id>http://localhost:4000/docs/posts/java-tutorial/</id>
-    <content src="http://localhost:4000/docs/posts/java-tutorial/" />
+    <id>https://cubeapm.github.io/posts/java-tutorial/</id>
+    <content src="https://cubeapm.github.io/posts/java-tutorial/" />
     <author>
       <name>CubeAPM</name>
     </author>
@@ -144,13 +144,13 @@ Steps to get started with OpenTelemetry for Tomcat Java application:
   
   <entry>
     <title>OpenTelemetry Golang | Tutorial with a sample Go app instrumentation</title>
-    <link href="http://localhost:4000/docs/posts/go-tutorial/" rel="alternate" type="text/html" title="OpenTelemetry Golang | Tutorial with a sample Go app instrumentation" />
+    <link href="https://cubeapm.github.io/posts/go-tutorial/" rel="alternate" type="text/html" title="OpenTelemetry Golang | Tutorial with a sample Go app instrumentation" />
     <published>2023-04-01T00:00:00+05:30</published>
   
     <updated>2023-04-02T18:27:15+05:30</updated>
   
-    <id>http://localhost:4000/docs/posts/go-tutorial/</id>
-    <content src="http://localhost:4000/docs/posts/go-tutorial/" />
+    <id>https://cubeapm.github.io/posts/go-tutorial/</id>
+    <content src="https://cubeapm.github.io/posts/go-tutorial/" />
     <author>
       <name>CubeAPM</name>
     </author>

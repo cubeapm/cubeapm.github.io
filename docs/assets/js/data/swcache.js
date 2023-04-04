@@ -1,47 +1,47 @@
 const resource = [
     /* --- CSS --- */
-    '/docs/assets/css/style.css',
+    '/assets/css/style.css',
 
     /* --- PWA --- */
-    '/docs/app.js',
-    '/docs/sw.js',
+    '/app.js',
+    '/sw.js',
 
     /* --- HTML --- */
-    '/docs/index.html',
-    '/docs/404.html',
+    '/index.html',
+    '/404.html',
 
     
-        '/docs/categories/',
+        '/categories/',
     
-        '/docs/tags/',
+        '/tags/',
     
-        '/docs/archives/',
+        '/archives/',
     
-        '/docs/about/',
+        '/about/',
     
 
     /* --- Favicons & compressed JS --- */
     
     
-        '/docs/assets/img/favicons/android-chrome-192x192.png',
-        '/docs/assets/img/favicons/android-chrome-512x512.png',
-        '/docs/assets/img/favicons/apple-touch-icon.png',
-        '/docs/assets/img/favicons/favicon-16x16.png',
-        '/docs/assets/img/favicons/favicon-32x32.png',
-        '/docs/assets/img/favicons/favicon.ico',
-        '/docs/assets/img/favicons/mstile-150x150.png',
-        '/docs/assets/js/dist/categories.min.js',
-        '/docs/assets/js/dist/commons.min.js',
-        '/docs/assets/js/dist/misc.min.js',
-        '/docs/assets/js/dist/page.min.js',
-        '/docs/assets/js/dist/post.min.js'
+        '/assets/img/favicons/android-chrome-192x192.png',
+        '/assets/img/favicons/android-chrome-512x512.png',
+        '/assets/img/favicons/apple-touch-icon.png',
+        '/assets/img/favicons/favicon-16x16.png',
+        '/assets/img/favicons/favicon-32x32.png',
+        '/assets/img/favicons/favicon.ico',
+        '/assets/img/favicons/mstile-150x150.png',
+        '/assets/js/dist/categories.min.js',
+        '/assets/js/dist/commons.min.js',
+        '/assets/js/dist/misc.min.js',
+        '/assets/js/dist/page.min.js',
+        '/assets/js/dist/post.min.js'
 ];
 
 /* The request url with below domain will be cached */
 const allowedDomains = [
     
 
-    'localhost:4000',
+    'cubeapm.github.io',
 
     
 

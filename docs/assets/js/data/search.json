@@ -2,7 +2,7 @@
   
   {
     "title": "OpenTelemetry Python | Tutorial with a sample Python app instrumentation",
-    "url": "/docs/posts/python-tutorial/",
+    "url": "/posts/python-tutorial/",
     "categories": "Auto-instrumentation, Python",
     "tags": "python, autoinstrumentation",
     "date": "2023-04-01 00:00:00 +0530",
@@ -19,7 +19,7 @@
   
   {
     "title": "OpenTelemetry Nodejs | Tutorial with a sample Nodejs app instrumentation",
-    "url": "/docs/posts/node-tutorial/",
+    "url": "/posts/node-tutorial/",
     "categories": "Auto-instrumentation, Nodejs",
     "tags": "nodejs, autoinstrumentation",
     "date": "2023-04-01 00:00:00 +0530",
@@ -36,7 +36,7 @@
   
   {
     "title": "OpenTelemetry Java | Tutorial with a sample Java app instrumentation",
-    "url": "/docs/posts/java-tutorial/",
+    "url": "/posts/java-tutorial/",
     "categories": "Auto-instrumentation, Java",
     "tags": "java, autoinstrumentation",
     "date": "2023-04-01 00:00:00 +0530",
@@ -53,7 +53,7 @@
   
   {
     "title": "OpenTelemetry Golang | Tutorial with a sample Go app instrumentation",
-    "url": "/docs/posts/go-tutorial/",
+    "url": "/posts/go-tutorial/",
     "categories": "Auto-instrumentation, Go",
     "tags": "go, autoinstrumentation",
     "date": "2023-04-01 00:00:00 +0530",

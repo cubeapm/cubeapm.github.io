@@ -43,8 +43,8 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="OpenTelemetry is a vendor-agnostic instrumentation library under CNCF. It can be used to instrument your Python applications to generate telemetry data. Let’s learn how it works and see how to visualize that data with CubeApm." />
 <meta property="og:description" content="OpenTelemetry is a vendor-agnostic instrumentation library under CNCF. It can be used to instrument your Python applications to generate telemetry data. Let’s learn how it works and see how to visualize that data with CubeApm." />
-<link rel="canonical" href="http://localhost:4000/docs/posts/python-tutorial/" />
-<meta property="og:url" content="http://localhost:4000/docs/posts/python-tutorial/" />
+<link rel="canonical" href="https://cubeapm.github.io/posts/python-tutorial/" />
+<meta property="og:url" content="https://cubeapm.github.io/posts/python-tutorial/" />
 <meta property="og:site_name" content="CubeAPM" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-04-01T00:00:00+05:30" />
@@ -52,7 +52,7 @@
 <meta property="twitter:title" content="OpenTelemetry Python Tutorial with a sample Python app instrumentation" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-02T18:27:15+05:30","datePublished":"2023-04-01T00:00:00+05:30","description":"OpenTelemetry is a vendor-agnostic instrumentation library under CNCF. It can be used to instrument your Python applications to generate telemetry data. Let’s learn how it works and see how to visualize that data with CubeApm.","headline":"OpenTelemetry Python Tutorial with a sample Python app instrumentation","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/docs/posts/python-tutorial/"},"url":"http://localhost:4000/docs/posts/python-tutorial/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-02T18:27:15+05:30","datePublished":"2023-04-01T00:00:00+05:30","description":"OpenTelemetry is a vendor-agnostic instrumentation library under CNCF. It can be used to instrument your Python applications to generate telemetry data. Let’s learn how it works and see how to visualize that data with CubeApm.","headline":"OpenTelemetry Python Tutorial with a sample Python app instrumentation","mainEntityOfPage":{"@type":"WebPage","@id":"https://cubeapm.github.io/posts/python-tutorial/"},"url":"https://cubeapm.github.io/posts/python-tutorial/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -67,15 +67,15 @@
 
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="/docs/assets/img/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/docs/assets/img/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/docs/assets/img/favicons/favicon-16x16.png">
-<link rel="manifest" href="/docs/assets/img/favicons/site.webmanifest">
-<link rel="shortcut icon" href="/docs/assets/img/favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/assets/img/favicons/site.webmanifest">
+<link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
 <meta name="apple-mobile-web-app-title" content="CubeAPM">
 <meta name="application-name" content="CubeAPM">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="/docs/assets/img/favicons/browserconfig.xml">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
 
@@ -106,7 +106,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css">
 
-  <link rel="stylesheet" href="/docs/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
 
   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.20.1/dist/tocbot.min.css">
@@ -256,13 +256,13 @@
 <div id="sidebar" class="d-flex flex-column align-items-end">
   <div class="profile-wrapper text-center">
     <div id="avatar">
-      <a href="/docs/" class="mx-auto">
+      <a href="/" class="mx-auto">
         
       </a>
     </div>
 
     <div class="site-title">
-      <a href="/docs/">CubeAPM</a>
+      <a href="/">CubeAPM</a>
     </div>
     <div class="site-subtitle font-italic">All in one monitoring tool</div>
 
@@ -272,7 +272,7 @@
 
     <!-- home -->
     <li class="nav-item">
-      <a href="/docs/" class="nav-link">
+      <a href="/" class="nav-link">
         <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i>
         <span>HOME</span>
       </a>
@@ -280,7 +280,7 @@
     <!-- the real tabs -->
     
     <li class="nav-item">
-      <a href="/docs/categories/" class="nav-link">
+      <a href="/categories/" class="nav-link">
         <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i>
         
 
@@ -289,7 +289,7 @@
     </li> <!-- .nav-item -->
     
     <li class="nav-item">
-      <a href="/docs/tags/" class="nav-link">
+      <a href="/tags/" class="nav-link">
         <i class="fa-fw fas fa-tag ml-xl-3 mr-xl-3 unloaded"></i>
         
 
@@ -298,7 +298,7 @@
     </li> <!-- .nav-item -->
     
     <li class="nav-item">
-      <a href="/docs/archives/" class="nav-link">
+      <a href="/archives/" class="nav-link">
         <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i>
         
 
@@ -307,7 +307,7 @@
     </li> <!-- .nav-item -->
     
     <li class="nav-item">
-      <a href="/docs/about/" class="nav-link">
+      <a href="/about/" class="nav-link">
         <i class="fa-fw fas fa-info-circle ml-xl-3 mr-xl-3 unloaded"></i>
         
 
@@ -391,7 +391,7 @@
       
 
       
-      <a href="/docs/feed.xml" aria-label="rss"
+      <a href="/feed.xml" aria-label="rss"
         
 
         
@@ -427,7 +427,7 @@
 
         
           <span>
-            <a href="/docs/">
+            <a href="/">
               Home
             </a>
           </span>
@@ -954,8 +954,8 @@ You’re almost done. In the last step, you just need to configure a few environ
   <div class="post-meta mb-3">
     <i class="far fa-folder-open fa-fw mr-1"></i>
     
-      <a href='/docs/categories/auto-instrumentation/'>Auto-instrumentation</a>,
-      <a href='/docs/categories/python/'>Python</a>
+      <a href='/categories/auto-instrumentation/'>Auto-instrumentation</a>,
+      <a href='/categories/python/'>Python</a>
   </div>
   
 
@@ -964,10 +964,10 @@ You’re almost done. In the last step, you just need to configure a few environ
   <div class="post-tags">
     <i class="fa fa-tags fa-fw mr-1"></i>
       
-      <a href="/docs/tags/python/"
+      <a href="/tags/python/"
           class="post-tag no-text-decoration" >python</a>
       
-      <a href="/docs/tags/autoinstrumentation/"
+      <a href="/tags/autoinstrumentation/"
           class="post-tag no-text-decoration" >autoinstrumentation</a>
       
   </div>
@@ -1003,19 +1003,19 @@ You’re almost done. In the last step, you just need to configure a few environ
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=OpenTelemetry%20Python%20%7C%20Tutorial%20with%20a%20sample%20Python%20app%20instrumentation%20-%20CubeAPM&url=http%3A%2F%2Flocalhost%3A4000%2Fdocs%2Fposts%2Fpython-tutorial%2F" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=OpenTelemetry%20Python%20%7C%20Tutorial%20with%20a%20sample%20Python%20app%20instrumentation%20-%20CubeAPM&url=https%3A%2F%2Fcubeapm.github.io%2Fposts%2Fpython-tutorial%2F" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=OpenTelemetry%20Python%20%7C%20Tutorial%20with%20a%20sample%20Python%20app%20instrumentation%20-%20CubeAPM&u=http%3A%2F%2Flocalhost%3A4000%2Fdocs%2Fposts%2Fpython-tutorial%2F" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=OpenTelemetry%20Python%20%7C%20Tutorial%20with%20a%20sample%20Python%20app%20instrumentation%20-%20CubeAPM&u=https%3A%2F%2Fcubeapm.github.io%2Fposts%2Fpython-tutorial%2F" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fdocs%2Fposts%2Fpython-tutorial%2F&text=OpenTelemetry%20Python%20%7C%20Tutorial%20with%20a%20sample%20Python%20app%20instrumentation%20-%20CubeAPM" data-toggle="tooltip" data-placement="top"
+        <a href="https://t.me/share/url?url=https%3A%2F%2Fcubeapm.github.io%2Fposts%2Fpython-tutorial%2F&text=OpenTelemetry%20Python%20%7C%20Tutorial%20with%20a%20sample%20Python%20app%20instrumentation%20-%20CubeAPM" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -1070,22 +1070,22 @@ You’re almost done. In the last step, you just need to configure a few environ
         
         
         
-      <li><a href="/docs/posts/go-tutorial/">OpenTelemetry Golang | Tutorial with a sample Go app instrumentation</a></li>
+      <li><a href="/posts/go-tutorial/">OpenTelemetry Golang | Tutorial with a sample Go app instrumentation</a></li>
       
         
         
         
-      <li><a href="/docs/posts/java-tutorial/">OpenTelemetry Java | Tutorial with a sample Java app instrumentation</a></li>
+      <li><a href="/posts/java-tutorial/">OpenTelemetry Java | Tutorial with a sample Java app instrumentation</a></li>
       
         
         
         
-      <li><a href="/docs/posts/node-tutorial/">OpenTelemetry Nodejs | Tutorial with a sample Nodejs app instrumentation</a></li>
+      <li><a href="/posts/node-tutorial/">OpenTelemetry Nodejs | Tutorial with a sample Nodejs app instrumentation</a></li>
       
         
         
         
-      <li><a href="/docs/posts/python-tutorial/">OpenTelemetry Python | Tutorial with a sample Python app instrumentation</a></li>
+      <li><a href="/posts/python-tutorial/">OpenTelemetry Python | Tutorial with a sample Python app instrumentation</a></li>
       
     </ul>
   </div> <!-- #access-lastmod -->
@@ -1223,19 +1223,19 @@ You’re almost done. In the last step, you just need to configure a few environ
 
     
       
-      <a class="post-tag" href="/docs/tags/autoinstrumentation/">autoinstrumentation</a>
+      <a class="post-tag" href="/tags/autoinstrumentation/">autoinstrumentation</a>
     
       
-      <a class="post-tag" href="/docs/tags/go/">go</a>
+      <a class="post-tag" href="/tags/go/">go</a>
     
       
-      <a class="post-tag" href="/docs/tags/java/">java</a>
+      <a class="post-tag" href="/tags/java/">java</a>
     
       
-      <a class="post-tag" href="/docs/tags/nodejs/">nodejs</a>
+      <a class="post-tag" href="/tags/nodejs/">nodejs</a>
     
       
-      <a class="post-tag" href="/docs/tags/python/">python</a>
+      <a class="post-tag" href="/tags/python/">python</a>
     
 
     </div>
@@ -1353,7 +1353,7 @@ You’re almost done. In the last step, you just need to configure a few environ
       
       
       <div class="card">
-        <a href="/docs/posts/go-tutorial/">
+        <a href="/posts/go-tutorial/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1390,7 +1390,7 @@ You’re almost done. In the last step, you just need to configure a few environ
       
       
       <div class="card">
-        <a href="/docs/posts/java-tutorial/">
+        <a href="/posts/java-tutorial/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1429,7 +1429,7 @@ After capturing tele...
       
       
       <div class="card">
-        <a href="/docs/posts/node-tutorial/">
+        <a href="/posts/node-tutorial/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1477,7 +1477,7 @@ Creating sample Nodejs a...
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/docs/posts/node-tutorial/" class="btn btn-outline-primary"
+  <a href="/posts/node-tutorial/" class="btn btn-outline-primary"
     prompt="Older">
     <p>OpenTelemetry Nodejs | Tutorial with a sample Nodejs app instrumentation</p>
   </a>
@@ -1641,19 +1641,19 @@ Creating sample Nodejs a...
 
     
       
-      <a class="post-tag" href="/docs/tags/autoinstrumentation/">autoinstrumentation</a>
+      <a class="post-tag" href="/tags/autoinstrumentation/">autoinstrumentation</a>
     
       
-      <a class="post-tag" href="/docs/tags/go/">go</a>
+      <a class="post-tag" href="/tags/go/">go</a>
     
       
-      <a class="post-tag" href="/docs/tags/java/">java</a>
+      <a class="post-tag" href="/tags/java/">java</a>
     
       
-      <a class="post-tag" href="/docs/tags/nodejs/">nodejs</a>
+      <a class="post-tag" href="/tags/nodejs/">nodejs</a>
     
       
-      <a class="post-tag" href="/docs/tags/python/">python</a>
+      <a class="post-tag" href="/tags/python/">python</a>
     
 
     </div>
@@ -1733,7 +1733,7 @@ Creating sample Nodejs a...
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('search-results'),
-  json: '/docs/assets/js/data/search.json',
+  json: '/assets/js/data/search.json',
   searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0">  <a href="{url}">{title}</a>  <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">    {categories}    {tags}  </div>  <p>{snippet}</p></div>',
   noResultsText: '<p class="mt-5">Oops! No results found.</p>',
   templateMiddleware: function(prop, value, template) {
@@ -1868,7 +1868,7 @@ SimpleJekyllSearch({
 
 
 
-<script defer src="/docs/assets/js/dist/post.min.js"></script>
+<script defer src="/assets/js/dist/post.min.js"></script>
 
 
 
