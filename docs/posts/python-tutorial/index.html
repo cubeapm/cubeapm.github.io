@@ -52,7 +52,7 @@
 <meta property="twitter:title" content="OpenTelemetry Python Tutorial with a sample Python app instrumentation" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-02T18:27:15+05:30","datePublished":"2023-04-01T00:00:00+05:30","description":"OpenTelemetry is a vendor-agnostic instrumentation library under CNCF. It can be used to instrument your Python applications to generate telemetry data. Let’s learn how it works and see how to visualize that data with CubeApm.","headline":"OpenTelemetry Python Tutorial with a sample Python app instrumentation","mainEntityOfPage":{"@type":"WebPage","@id":"https://cubeapm.github.io/posts/python-tutorial/"},"url":"https://cubeapm.github.io/posts/python-tutorial/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-04T15:45:55+05:30","datePublished":"2023-04-01T00:00:00+05:30","description":"OpenTelemetry is a vendor-agnostic instrumentation library under CNCF. It can be used to instrument your Python applications to generate telemetry data. Let’s learn how it works and see how to visualize that data with CubeApm.","headline":"OpenTelemetry Python Tutorial with a sample Python app instrumentation","mainEntityOfPage":{"@type":"WebPage","@id":"https://cubeapm.github.io/posts/python-tutorial/"},"url":"https://cubeapm.github.io/posts/python-tutorial/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -700,10 +700,10 @@
 
 
 <em class=""
-    data-ts="1680440235"
+    data-ts="1680603355"
     data-df="ll"
     data-toggle="tooltip" data-placement="bottom">
-  Apr  2, 2023
+  Apr  4, 2023
 </em>
 
     </span>
@@ -749,7 +749,7 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="870 words">
+  title="815 words">
   <em>4 min</em> read</span>
 
     </div>
@@ -786,16 +786,20 @@
 <div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>git clone -b main https://github.com/CubeApm/CubeApm.gitcd CubeApm/deploy/./install.sh
+2
+3
+</pre></td><td class="rouge-code"><pre>git clone -b main https://github.com/CubeApm/CubeApm.git
+cd CubeApm/deploy/
+./install.sh
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>For detailed instructions, you can visit our documentation.</p>
 
 <p>When you are done installing CubeApm, you can access the UI at: <code class="language-plaintext highlighter-rouge">http://localhost:3301</code></p>
 
-<p>The application list shown in the dashboard is from a sample app called HOT R.O.D that comes bundled with the CubeApm installation package.</p>
+<!-- The application list shown in the dashboard is from a sample app called HOT R.O.D that comes bundled with the CubeApm installation package.
 
-<p><em>CubeApm dashboard</em></p>
+_CubeApm dashboard_ -->
 
 <h2 id="installing-sample-python-app"><span class="mr-2">Installing sample Python app<a href="#installing-sample-python-app" title="Direct link to Installing sample Python app">​</a></span><a href="#installing-sample-python-app" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
@@ -806,19 +810,35 @@
 If you do not have Python installed on your system, you can download it from the <a href="https://www.python.org/downloads/">link</a>. Check the version of Python using <code class="language-plaintext highlighter-rouge">python3 --version</code> on your terminal to see if Python is properly installed or not.</li>
   <li>
     <p><strong>MongoDB</strong><br />
-If you already have MongoDB services running on your system, you can skip this step.</p>
+ If you already have MongoDB services running on your system, you can skip this step.</p>
 
-    <p>For macOS: <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/</a></p>
+    <div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre>For macOS: [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)
 
-    <p>For Linux: <a href="https://docs.mongodb.com/manual/administration/install-on-linux/">https://docs.mongodb.com/manual/administration/install-on-linux/</a></p>
+For Linux: [https://docs.mongodb.com/manual/administration/install-on-linux/](https://docs.mongodb.com/manual/administration/install-on-linux/)
 
-    <p>For Ubuntu: <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/</a></p>
+For Ubuntu: [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
 
-    <p>For Windows: <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/</a></p>
+For Windows: [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/)
 
-    <p>On MacOS the installation is done using Homebrew’s brew package manager. Once the installation is done, don’t forget to start MongoDB services using <code class="language-plaintext highlighter-rouge">brew services start mongodb/brew/mongodb-community@4.4</code>  on your macOS terminal.</p>
+On MacOS the installation is done using Homebrew's brew package manager. Once the installation is done, don't forget to start MongoDB services using `brew services start mongodb/brew/mongodb-community@4.4`  on your macOS terminal.
 
-    <p><em>starting mongoDB services from mac terminal</em></p>
+&lt;!-- _starting mongoDB services from mac terminal_ --&gt;
+</pre></td></tr></tbody></table></code></div>    </div>
+
+    <p>&lt;!–</p>
   </li>
 </ol>
 
@@ -831,7 +851,9 @@ If you already have MongoDB services running on your system, you can skip this s
     <div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>git clone https://github.com/CubeApm/sample-flask-app.gitcd sample-flask-app
+2
+</pre></td><td class="rouge-code"><pre>git clone https://github.com/CubeApm/sample-flask-app.git
+cd sample-flask-app
 </pre></td></tr></tbody></table></code></div>    </div>
   </li>
   <li>
@@ -849,7 +871,7 @@ If you already have MongoDB services running on your system, you can skip this s
 
 <p>You can now access the UI of the app on your local host: http://localhost:5002/</p>
 
-<p><em>Python app UI</em></p>
+<p><em>Python app UI</em> –&gt;</p>
 
 <h2 id="instrumentation-with-opentelemetry-and-sending-data-to-cubeapm"><span class="mr-2">Instrumentation with OpenTelemetry and sending data to CubeApm<a href="#instrumentation-with-opentelemetry-and-sending-data-to-CubeApm" title="Direct link to Instrumentation with OpenTelemetry and sending data to CubeApm">​</a></span><a href="#instrumentation-with-opentelemetry-and-sending-data-to-cubeapm" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
@@ -893,14 +915,18 @@ You’re almost done. In the last step, you just need to configure a few environ
 
     <p>You need to put these environment variables in the below command.</p>
 
-    <p>note</p>
+    <p><strong>Note</strong></p>
 
     <p>Don’t run app in reloader/hot-reload mode as it breaks instrumentation.</p>
 
     <div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>OTEL_RESOURCE_ATTRIBUTES=service.name=&lt;service_name&gt; OTEL_EXPORTER_OTLP_ENDPOINT="http://&lt;IP of CubeApm&gt;:4317" opentelemetry-instrument python3 app.py
+2
+3
+</pre></td><td class="rouge-code"><pre>OTEL_RESOURCE_ATTRIBUTES=service.name=&lt;service_name&gt; OTEL_EXPORTER_OTLP_ENDPOINT="http://&lt;IP of CubeApm&gt;:4317"
+
+opentelemetry-instrument python3 app.py
 </pre></td></tr></tbody></table></code></div>    </div>
 
     <p>As we are running CubeApm on local host, <code class="language-plaintext highlighter-rouge">IP of CubeApm</code> can be replaced with <code class="language-plaintext highlighter-rouge">localhost</code> in this case. And, for <code class="language-plaintext highlighter-rouge">service_name</code> let’s use <code class="language-plaintext highlighter-rouge">pythonApp</code>. Hence, the final command becomes:</p>
@@ -910,14 +936,18 @@ You’re almost done. In the last step, you just need to configure a few environ
     <div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>OTEL_RESOURCE_ATTRIBUTES=service.name=pythonApp OTEL_EXPORTER_OTLP_ENDPOINT="http://localhost:4317" opentelemetry-instrument python3 app.py
+2
+3
+</pre></td><td class="rouge-code"><pre>OTEL_RESOURCE_ATTRIBUTES=service.name=pythonApp OTEL_EXPORTER_OTLP_ENDPOINT="http://localhost:4317"
+
+opentelemetry-instrument python3 app.py
 </pre></td></tr></tbody></table></code></div>    </div>
 
     <p>And, congratulations! You have instrumented your sample Python app. You can now access the CubeApm dashboard at <a href="http://localhost:3301/">http://localhost:3301</a> to monitor your app for performance metrics.</p>
   </li>
 </ol>
 
-<p><em>CubeApm dashboard showing python app in its list of applications</em></p>
+<!-- _CubeApm dashboard showing python app in its list of applications_ -->
 
 <h2 id="metrics-and-traces-of-the-python-application"><span class="mr-2">Metrics and Traces of the Python application<a href="#metrics-and-traces-of-the-python-application" title="Direct link to Metrics and Traces of the Python application">​</a></span><a href="#metrics-and-traces-of-the-python-application" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
@@ -931,19 +961,19 @@ You’re almost done. In the last step, you just need to configure a few environ
   <li>Duration taken by requests</li>
 </ul>
 
-<p><em>CubeApm dashboard showing the popular RED metrics for application performance monitoring</em></p>
+<!-- _CubeApm dashboard showing the popular RED metrics for application performance monitoring_ -->
 
 <p>You can then choose a particular timestamp where latency is high to drill down to traces around that timestamp.</p>
 
-<p><em>View of traces at a particular timestamp</em></p>
+<!-- _View of traces at a particular timestamp_
 
-<p>You can use flamegraphs to exactly identify the issue causing the latency.</p>
+You can use flamegraphs to exactly identify the issue causing the latency.
 
-<p><em>Flamegraphs showing exact duration taken by each spans - a concept of distributed tracing</em></p>
+_Flamegraphs showing exact duration taken by each spans - a concept of distributed tracing_ -->
 
 <h2 id="conclusion"><span class="mr-2">Conclusion<a href="#conclusion" title="Direct link to Conclusion">​</a></span><a href="#conclusion" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p>OpenTelemetry makes it very convenient to instrument your Python application. You can then use an open-source APM tool like CubeApm to analyze the performance of your app. As CubeApm offers a full-stack observability tool, you don’t have to use multiple tools for your monitoring needs.</p>
+<p>OpenTelemetry makes it very convenient to instrument your Python application. You can then use an APM tool like CubeApm to analyze the performance of your app. As CubeApm offers a full-stack observability tool, you don’t have to use multiple tools for your monitoring needs.</p>
 
 </div>
 

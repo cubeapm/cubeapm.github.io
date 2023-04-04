@@ -52,7 +52,7 @@
 <meta property="twitter:title" content="OpenTelemetry Golang Tutorial with a sample Go app instrumentation" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-02T18:27:15+05:30","datePublished":"2023-04-01T00:00:00+05:30","description":"OpenTelemetry can be used to generate telemetry data from your Go applications. The collected data can then be sent to an observability tool for storage and visualization. OpenTelemetry is an open-source project under the Cloud Native Computing Foundation (CNCF) that aims to standardize the generation and collection of telemetry data.","headline":"OpenTelemetry Golang Tutorial with a sample Go app instrumentation","mainEntityOfPage":{"@type":"WebPage","@id":"https://cubeapm.github.io/posts/go-tutorial/"},"url":"https://cubeapm.github.io/posts/go-tutorial/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-04T15:45:55+05:30","datePublished":"2023-04-01T00:00:00+05:30","description":"OpenTelemetry can be used to generate telemetry data from your Go applications. The collected data can then be sent to an observability tool for storage and visualization. OpenTelemetry is an open-source project under the Cloud Native Computing Foundation (CNCF) that aims to standardize the generation and collection of telemetry data.","headline":"OpenTelemetry Golang Tutorial with a sample Go app instrumentation","mainEntityOfPage":{"@type":"WebPage","@id":"https://cubeapm.github.io/posts/go-tutorial/"},"url":"https://cubeapm.github.io/posts/go-tutorial/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -520,159 +520,6 @@
 
 
 
-  
-  
-
-  <!-- CDN URL -->
-  
-
-  <!-- Add image path -->
-  
-
-  
-    
-      
-      
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-      
-
-      
-
-    
-
-    <!-- take out classes -->
-    
-
-    
-
-    
-
-    
-
-    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
-    
-    
-
-    <!-- add image placeholder -->
-    
-      
-    
-
-    <!-- Bypass the HTML-proofer test -->
-    
-
-    <!-- make sure the `<img>` is wrapped by `<a>` -->
-    
-
-    
-      <!-- create the image wrapper -->
-      
-    
-
-    <!-- combine -->
-    
-
-  
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-      
-
-      
-
-    
-
-    <!-- take out classes -->
-    
-
-    
-
-    
-
-    
-
-    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
-    
-    
-
-    <!-- add image placeholder -->
-    
-      
-    
-
-    <!-- Bypass the HTML-proofer test -->
-    
-
-    <!-- make sure the `<img>` is wrapped by `<a>` -->
-    
-
-    
-      <!-- create the image wrapper -->
-      
-    
-
-    <!-- combine -->
-    
-
-  
-
-  
-
-
 
 <!-- Add header for code snippets -->
 
@@ -818,10 +665,10 @@
 
 
 <em class=""
-    data-ts="1680440235"
+    data-ts="1680603355"
     data-df="ll"
     data-toggle="tooltip" data-placement="bottom">
-  Apr  2, 2023
+  Apr  4, 2023
 </em>
 
     </span>
@@ -867,8 +714,8 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="1173 words">
-  <em>6 min</em> read</span>
+  title="883 words">
+  <em>4 min</em> read</span>
 
     </div>
 
@@ -879,7 +726,7 @@
 <div class="post-content">
   <p>OpenTelemetry can be used to generate telemetry data from your Go applications. The collected data can then be sent to an observability tool for storage and visualization. OpenTelemetry is an open-source project under the Cloud Native Computing Foundation (<a href="https://www.cncf.io/">CNCF</a>) that aims to standardize the generation and collection of telemetry data.</p>
 
-<p>In this tutorial, we will use OpenTelemetry Go libraries to instrument a Go application and then visualize it using an open-source observability tool - <a href="https://CubeApm.io/">CubeApm</a>.</p>
+<p>In this tutorial, we will use OpenTelemetry Go libraries to instrument a Go application and then visualize it using an observability tool - <a href="https://CubeApm.io/">CubeApm</a>.</p>
 
 <p>Steps to get started with OpenTelemetry for Go applications:</p>
 
@@ -896,29 +743,23 @@
 
 <p>CubeApm can be installed on macOS or Linux machines in just three steps by using a simple install script.</p>
 
-<p>The install script automatically installs Docker Engine on Linux. However, on macOS, you must manually install <a href="https://docs.docker.com/engine/install/">Docker Engine</a> before running the install script.</p>
-
 <div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>git clone -b main https://github.com/CubeApm/CubeApm.gitcd CubeApm/deploy/./install.sh
+2
+3
+</pre></td><td class="rouge-code"><pre>git clone -b main https://github.com/CubeApm/CubeApm.git
+cd CubeApm/deploy/
+./install.sh
 </pre></td></tr></tbody></table></code></div></div>
-
-<p>You can visit our documentation for instructions on how to install CubeApm using Docker Swarm and Helm Charts.</p>
 
 <p>When you are done installing CubeApm, you can access the UI at <a href="http://localhost:3301/application">http://localhost:3301</a></p>
 
-<p><em>CubeApm dashboard - It shows services from a sample app that comes bundled with the application</em></p>
+<!-- _CubeApm dashboard - It shows services from a sample app that comes bundled with the application_ -->
 
 <h2 id="instrumenting-a-go-application-with-opentelemetry"><span class="mr-2">Instrumenting a Go application with OpenTelemetry<a href="#instrumenting-a-go-application-with-opentelemetry" title="Direct link to Instrumenting a Go application with OpenTelemetry">​</a></span><a href="#instrumenting-a-go-application-with-opentelemetry" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p><strong>Step 1: Get sample Go app from GitHub</strong></p>
-
-<p>The <a href="https://github.com/CubeApm/sample-golang-app">sample Go app repo</a> contains the boilerplate code that we will instrument.</p>
-
-<p>If you want to follow along with the tutorial, then you should follow the <code class="language-plaintext highlighter-rouge">without-instrumentation</code> branch.</p>
-
-<p><strong>Step 2: Install dependencies</strong></p>
+<p><strong>Step 1: Install dependencies</strong></p>
 
 <p>Dependencies related to OpenTelemetry exporter and SDK have to be installed first. Run the below commands after navigating to the application source folder:</p>
 
@@ -938,7 +779,7 @@
 <span class="k">go</span><span class="o">.</span><span class="n">opentelemetry</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">otel</span><span class="o">/</span><span class="n">exporters</span><span class="o">/</span><span class="n">otlp</span><span class="o">/</span><span class="n">otlptrace</span><span class="o">/</span><span class="n">otlptracegrpc</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p><strong>Step 3: Declare environment variables for configuring OpenTelemetry</strong></p>
+<p><strong>Step 2: Declare environment variables for configuring OpenTelemetry</strong></p>
 
 <p>Declare the following variables in <code class="language-plaintext highlighter-rouge">main.go</code> which we will use to configure OpenTelemetry:</p>
 
@@ -956,7 +797,7 @@
 <span class="p">)</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p><strong>Step 4: Instrument your Go application with OpenTelemetry</strong></p>
+<p><strong>Step 3: Instrument your Go application with OpenTelemetry</strong></p>
 
 <p>To configure your application to send data we will need a function to initialize OpenTelemetry. Add the following snippet of code in your <code class="language-plaintext highlighter-rouge">main.go</code> file.</p>
 
@@ -1064,7 +905,7 @@
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p><strong>Step 5: Initialize the tracer in main.go</strong></p>
+<p><strong>Step 4: Initialize the tracer in main.go</strong></p>
 
 <p>Modify the main function to initialise the tracer in <code class="language-plaintext highlighter-rouge">main.go</code></p>
 
@@ -1084,7 +925,7 @@
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p><strong>Step 6: Add the OpenTelemetry Gin middleware</strong></p>
+<p><strong>Step 5: Add the OpenTelemetry Gin middleware</strong></p>
 
 <p>Configure Gin to use the middleware by adding the following lines in <code class="language-plaintext highlighter-rouge">main.go</code>.</p>
 
@@ -1116,7 +957,7 @@
 
 </pre></td></tr></tbody></table></code></div></div>
 
-<p><strong>Step 7: Set environment variables and run your Go Gin application</strong></p>
+<p><strong>Step 6: Set environment variables and run your Go Gin application</strong></p>
 
 <p>Now that you have instrumented your Go Gin application with OpenTelemetry, you need to set some environment variables to send data to CubeApm backend:</p>
 
@@ -1131,12 +972,16 @@
 <div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>SERVICE_NAME=goGinApp INSECURE_MODE=true OTEL_EXPORTER_OTLP_ENDPOINT=localhost:4317 go run main.go
+2
+3
+</pre></td><td class="rouge-code"><pre>SERVICE_NAME=goGinApp
+INSECURE_MODE=true
+OTEL_EXPORTER_OTLP_ENDPOINT=localhost:4317 go run main.go
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>And, congratulations! You have instrumented your sample Golang app.</p>
 
-<p>Hit the <code class="language-plaintext highlighter-rouge">/books</code> endpoint of the bookstore app at <a href="http://localhost:8090/books">http://localhost:8090/books</a>. Refresh it a bunch of times in order to generate load, and wait for 1-2 mins for data to appear on CubeApm dashboard.</p>
+<!-- Hit the `/books` endpoint of the bookstore app at [http://localhost:8090/books](http://localhost:8090/books). Refresh it a bunch of times in order to generate load, and wait for 1-2 mins for data to appear on CubeApm dashboard. -->
 
 <h2 id="adding-custom-attributes-and-custom-events-to-spans"><span class="mr-2">Adding custom attributes and custom events to spans<a href="#adding-custom-attributes-and-custom-events-to-spans" title="Direct link to Adding custom attributes and custom events to spans">​</a></span><a href="#adding-custom-attributes-and-custom-events-to-spans" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
@@ -1174,11 +1019,12 @@
 </pre></td><td class="rouge-code"><pre>  <span class="n">span</span><span class="o">.</span><span class="n">SetAttributes</span><span class="p">(</span><span class="n">attribute</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"controller"</span><span class="p">,</span> <span class="s">"books"</span><span class="p">))</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>CubeApm dashboards can be used to track these custom attributes.</p>
+<!-- CubeApm dashboards can be used to track these custom attributes. -->
 
-<p><a href="/img/blog/2022/05/opentelemetry_go_custom_attributes.webp" class="popup img-link "><img data-src="/img/blog/2022/05/opentelemetry_go_custom_attributes.webp" alt="Custom attributes on CubeApm dashboard" class="lazyload" data-proofer-ignore></a></p>
+<!-- ![Custom attributes on CubeApm dashboard](/img/blog/2022/05/opentelemetry_go_custom_attributes.webp) -->
 
-<p><em>Custom attributes can seen under `Tags` section on CubeApm trace detail page</em></p>
+<!-- TODO - Check with Vijay -->
+<!-- _Custom attributes can seen under \`Tags\` section on CubeApm trace detail page_ -->
 
 <p>We can also set custom event on the span with it’s own attribute.</p>
 
@@ -1188,13 +1034,14 @@
 </pre></td><td class="rouge-code"><pre><span class="n">span</span><span class="o">.</span><span class="n">AddEvent</span><span class="p">(</span><span class="s">"This is a sample event"</span><span class="p">,</span> <span class="n">trace</span><span class="o">.</span><span class="n">WithAttributes</span><span class="p">(</span><span class="n">attribute</span><span class="o">.</span><span class="n">Int</span><span class="p">(</span><span class="s">"pid"</span><span class="p">,</span> <span class="m">4328</span><span class="p">),</span> <span class="n">attribute</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"sampleAttribute"</span><span class="p">,</span> <span class="s">"Test"</span><span class="p">)))</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>You can also see these custom events on CubeApm dashboard.</p>
+<!-- You can also see these custom events on CubeApm dashboard. -->
 
-<p><a href="/img/blog/2022/05/opentelemetry_go_events.webp" class="popup img-link "><img data-src="/img/blog/2022/05/opentelemetry_go_events.webp" alt="Custom Events on CubeApm Dashboard" class="lazyload" data-proofer-ignore></a></p>
+<!-- ![Custom Events on CubeApm Dashboard](/img/blog/2022/05/opentelemetry_go_events.webp) -->
 
-<p><em>Events can be seen under `Events` section on CubeApm trace detail page</em></p>
+<!-- TODO - Check with Vijay -->
+<!-- _Events can be seen under \`Events\` section on CubeApm trace detail page_ -->
 
-<p>Events can be seen under <code class="language-plaintext highlighter-rouge">Events</code> section on CubeApm trace detail page</p>
+<!-- Events can be seen under `Events` section on CubeApm trace detail page -->
 
 <h2 id="monitor-your-go-application-with-cubeapm-dashboards"><span class="mr-2">Monitor your Go application with CubeApm dashboards<a href="#monitor-your-go-application-with-CubeApm-dashboards" title="Direct link to Monitor your Go application with CubeApm dashboards">​</a></span><a href="#monitor-your-go-application-with-cubeapm-dashboards" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
@@ -1204,27 +1051,28 @@
 
 <p>You can then navigate to <a href="http://localhost:3301/application">http://localhost:3301/application</a> (needs signup) to see your Go app being monitored.</p>
 
-<p>Go to <code class="language-plaintext highlighter-rouge">Metrics</code>→ <code class="language-plaintext highlighter-rouge">goGinApp</code>→ you will be able to see the dashboard.</p>
+<!-- TODO - Check with Vijay -->
+<!-- Go to `Metrics`→ `goGinApp`→ you will be able to see the dashboard. -->
 
-<p><em>Your Go Gin application being monitored on the CubeApm dashboard</em></p>
+<!-- _Your Go Gin application being monitored on the CubeApm dashboard_ -->
 
-<p>You can monitor application metrics like application latency, requests per second, error percentage, etc. with the <code class="language-plaintext highlighter-rouge">Metrics</code> tab of CubeApm.</p>
+<!-- You can monitor application metrics like application latency, requests per second, error percentage, etc. with the `Metrics` tab of CubeApm.
 
-<p><em>You can monitor your Go Gin application metrics like application latency, requests per second, error percentage, etc.</em></p>
+_You can monitor your Go Gin application metrics like application latency, requests per second, error percentage, etc._ -->
 
 <p>OpenTelemetry captures tracing data from your Gin application as well. Tracing data can help you visualize how user requests perform across services in a multi-service application.</p>
 
-<p>In the <code class="language-plaintext highlighter-rouge">Traces</code> tab of CubeApm, you can analyze the tracing data using filters based on tags, status codes, service names, operations, etc.</p>
+<!-- In the `Traces` tab of CubeApm, you can analyze the tracing data using filters based on tags, status codes, service names, operations, etc.
 
-<p><em>Use powerful filters to analyze your tracing data from the Gin application</em></p>
+_Use powerful filters to analyze your tracing data from the Gin application_ -->
 
-<p>You can also visualize your tracing data with the help of flamegraphs and Gantt charts.</p>
+<!-- You can also visualize your tracing data with the help of flamegraphs and Gantt charts.
 
-<p><em>Flamegraphs and Gantt charts on CubeApm dashboard</em></p>
+_Flamegraphs and Gantt charts on CubeApm dashboard_ -->
 
 <h2 id="conclusion"><span class="mr-2">Conclusion<a href="#conclusion" title="Direct link to Conclusion">​</a></span><a href="#conclusion" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p>Using OpenTelemetry libraries, you can instrument your Go applications for setting up observability. You can then use an open-source APM tool like CubeApm to ensure the smooth performance of your Go applications.</p>
+<p>Using OpenTelemetry libraries, you can instrument your Go applications for setting up observability. You can then use an APM tool like CubeApm to ensure the smooth performance of your Go applications.</p>
 
 <p>OpenTelemetry is the future for setting up observability for cloud-native apps. It is backed by a huge community and covers a wide variety of technology and frameworks. Using OpenTelemetry, engineering teams can instrument polyglot and distributed applications with peace of mind.</p>
 

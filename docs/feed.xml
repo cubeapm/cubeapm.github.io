@@ -4,7 +4,7 @@
   <id>https://cubeapm.github.io/</id>
   <title>CubeAPM</title>
   <subtitle>A minimal, easy to setup and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2023-04-04T15:00:57+05:30</updated>
+  <updated>2023-04-04T15:45:58+05:30</updated>
   <author>
     <name>CubeAPM</name>
     <uri>https://cubeapm.github.io/</uri>
@@ -24,7 +24,7 @@
     <link href="https://cubeapm.github.io/posts/python-tutorial/" rel="alternate" type="text/html" title="OpenTelemetry Python | Tutorial with a sample Python app instrumentation" />
     <published>2023-04-01T00:00:00+05:30</published>
   
-    <updated>2023-04-02T18:27:15+05:30</updated>
+    <updated>2023-04-04T15:45:55+05:30</updated>
   
     <id>https://cubeapm.github.io/posts/python-tutorial/</id>
     <content src="https://cubeapm.github.io/posts/python-tutorial/" />
@@ -64,7 +64,7 @@ OpenTelemetry emerged as a single project after the merging of OpenCensus(from G
     <link href="https://cubeapm.github.io/posts/node-tutorial/" rel="alternate" type="text/html" title="OpenTelemetry Nodejs | Tutorial with a sample Nodejs app instrumentation" />
     <published>2023-04-01T00:00:00+05:30</published>
   
-    <updated>2023-04-02T18:27:15+05:30</updated>
+    <updated>2023-04-04T15:45:55+05:30</updated>
   
     <id>https://cubeapm.github.io/posts/node-tutorial/</id>
     <content src="https://cubeapm.github.io/posts/node-tutorial/" />
@@ -104,7 +104,7 @@ You need to ensure that you have Node.js version 12 or newer. You can download t
     <link href="https://cubeapm.github.io/posts/java-tutorial/" rel="alternate" type="text/html" title="OpenTelemetry Java | Tutorial with a sample Java app instrumentation" />
     <published>2023-04-01T00:00:00+05:30</published>
   
-    <updated>2023-04-02T18:27:15+05:30</updated>
+    <updated>2023-04-04T15:45:55+05:30</updated>
   
     <id>https://cubeapm.github.io/posts/java-tutorial/</id>
     <content src="https://cubeapm.github.io/posts/java-tutorial/" />
@@ -130,12 +130,12 @@ You need to ensure that you have Node.js version 12 or newer. You can download t
 
       OpenTelemetry is a vendor-agnostic instrumentation library. In this article, let’s explore how to auto-instrument a Tomcat Java application using OpenTelemetry Java JAR agent.
 
-After capturing telemetry data with OpenTelemetry, we will use CubeApm, an open-source full-stack observability tool, to visualize the data.
+After capturing telemetry data with OpenTelemetry, we will use CubeApm, an full-stack observability tool, to visualize the data.
 
 Steps to get started with OpenTelemetry for Tomcat Java application:
 
 
-  Insta...
+  Installing CubeAp...
     </summary>
   
 
@@ -147,7 +147,7 @@ Steps to get started with OpenTelemetry for Tomcat Java application:
     <link href="https://cubeapm.github.io/posts/go-tutorial/" rel="alternate" type="text/html" title="OpenTelemetry Golang | Tutorial with a sample Go app instrumentation" />
     <published>2023-04-01T00:00:00+05:30</published>
   
-    <updated>2023-04-02T18:27:15+05:30</updated>
+    <updated>2023-04-04T15:45:55+05:30</updated>
   
     <id>https://cubeapm.github.io/posts/go-tutorial/</id>
     <content src="https://cubeapm.github.io/posts/go-tutorial/" />

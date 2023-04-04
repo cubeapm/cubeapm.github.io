@@ -52,7 +52,7 @@
 <meta property="twitter:title" content="OpenTelemetry Java Tutorial with a sample Java app instrumentation" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-02T18:27:15+05:30","datePublished":"2023-04-01T00:00:00+05:30","description":"OpenTelemetry is a vendor-agnostic instrumentation library. In this article, let’s explore how to auto-instrument a Tomcat Java application using OpenTelemetry Java JAR agent.","headline":"OpenTelemetry Java Tutorial with a sample Java app instrumentation","mainEntityOfPage":{"@type":"WebPage","@id":"https://cubeapm.github.io/posts/java-tutorial/"},"url":"https://cubeapm.github.io/posts/java-tutorial/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-04T15:45:55+05:30","datePublished":"2023-04-01T00:00:00+05:30","description":"OpenTelemetry is a vendor-agnostic instrumentation library. In this article, let’s explore how to auto-instrument a Tomcat Java application using OpenTelemetry Java JAR agent.","headline":"OpenTelemetry Java Tutorial with a sample Java app instrumentation","mainEntityOfPage":{"@type":"WebPage","@id":"https://cubeapm.github.io/posts/java-tutorial/"},"url":"https://cubeapm.github.io/posts/java-tutorial/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -590,18 +590,6 @@
       
 
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
 
     
 
@@ -609,29 +597,6 @@
 
   
   
-
-  
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-
-    
 
   
 
@@ -688,10 +653,10 @@
 
 
 <em class=""
-    data-ts="1680440235"
+    data-ts="1680603355"
     data-df="ll"
     data-toggle="tooltip" data-placement="bottom">
-  Apr  2, 2023
+  Apr  4, 2023
 </em>
 
     </span>
@@ -737,8 +702,8 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="825 words">
-  <em>4 min</em> read</span>
+  title="638 words">
+  <em>3 min</em> read</span>
 
     </div>
 
@@ -749,7 +714,7 @@
 <div class="post-content">
   <p>OpenTelemetry is a vendor-agnostic instrumentation library. In this article, let’s explore how to auto-instrument a Tomcat Java application using OpenTelemetry Java JAR agent.</p>
 
-<p>After capturing telemetry data with OpenTelemetry, we will use CubeApm, an open-source full-stack observability tool, to visualize the data.</p>
+<p>After capturing telemetry data with OpenTelemetry, we will use CubeApm, an full-stack observability tool, to visualize the data.</p>
 
 <p>Steps to get started with OpenTelemetry for Tomcat Java application:</p>
 
@@ -767,50 +732,38 @@
 <div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>git clone -b main https://github.com/CubeApm/CubeApm.gitcd CubeApm/deploy/./install.sh
+2
+3
+</pre></td><td class="rouge-code"><pre>git clone -b main https://github.com/CubeApm/CubeApm.git
+cd CubeApm/deploy/
+./install.sh
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>For detailed instructions, you can visit our documentation.</p>
 
 <p>We have installed CubeApm on a Ubuntu VM in Azure cloud. You can access CubeApm UI at <code class="language-plaintext highlighter-rouge">http://IP_of_CubeApm:3301</code>. You can access CubeApm UI at port: 3301 of any host that you choose. In case of local host just use: <code class="language-plaintext highlighter-rouge">http://localhost:3301</code></p>
 
-<p>The application list shown in the dashboard is from a sample app called HOT R.O.D that comes bundled with the CubeApm installation package.</p>
+<!-- CubeApm Dashboard -->
 
-<p>CubeApm Dashboard</p>
+<!-- ## Installing sample Tomcat Java application[​](#installing-sample-tomcat-java-application "Direct link to Installing sample Tomcat Java application")
 
-<h2 id="installing-sample-tomcat-java-application"><span class="mr-2">Installing sample Tomcat Java application<a href="#installing-sample-tomcat-java-application" title="Direct link to Installing sample Tomcat Java application">​</a></span><a href="#installing-sample-tomcat-java-application" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+**Prerequisites:**
+Make sure you have Tomcat installed on your system. If not, then you can download it from [Apache Tomcat website](https://tomcat.apache.org/index.html). For this tutorial I have used Tomcat 10.0.8.
 
-<p><strong>Prerequisites:</strong><br />
-Make sure you have Tomcat installed on your system. If not, then you can download it from <a href="https://tomcat.apache.org/index.html">Apache Tomcat website</a>. For this tutorial I have used Tomcat 10.0.8.</p>
+### Steps to install sample Tomcat Java application:[​](#steps-to-install-sample-tomcat-java-application "Direct link to Steps to install sample Tomcat Java application:")
 
-<h3 id="steps-to-install-sample-tomcat-java-application"><span class="mr-2">Steps to install sample Tomcat Java application:<a href="#steps-to-install-sample-tomcat-java-application" title="Direct link to Steps to install sample Tomcat Java application:">​</a></span><a href="#steps-to-install-sample-tomcat-java-application" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+- Download an example app packaged as a war file provided at Apache Tomcat official website - [Sample Tomcat app](https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/)
+- The easiest way to run the sample app is to move it to webapps folder inside the Tomcat directory.
 
-<ul>
-  <li>Download an example app packaged as a war file provided at Apache Tomcat official website - <a href="https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/">Sample Tomcat app</a></li>
-  <li>
-    <p>The easiest way to run the sample app is to move it to webapps folder inside the Tomcat directory.</p>
+      cd Tomcat/webappscp ~/Downloads/sample.war .
 
-    <div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>cd Tomcat/webappscp ~/Downloads/sample.war .
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-  <li>
-    <p>Once you have copied the file in the webapps folder, get back to the Tomcat folder and run the app using the following command.</p>
+- Once you have copied the file in the webapps folder, get back to the Tomcat folder and run the app using the following command.
 
-    <div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>cd ..bin/startup.sh
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-  <li>
-    <p>Check if the sample app is running at: http://localhost:8080/sample/ . The sample should open up like below.</p>
+      cd ..bin/startup.sh
 
-    <p>By clicking on the links shown on the page, you can see that it makes dummy calls to a page as part of the Hello World application.</p>
-  </li>
-</ul>
+- Check if the sample app is running at: http://localhost:8080/sample/ . The sample should open up like below.
+
+  By clicking on the links shown on the page, you can see that it makes dummy calls to a page as part of the Hello World application. -->
 
 <h2 id="auto-instrumentation-with-opentelemetry-java-agent"><span class="mr-2">Auto Instrumentation with OpenTelemetry Java agent<a href="#auto-instrumentation-with-opentelemetry-java-agent" title="Direct link to Auto Instrumentation with OpenTelemetry Java agent">​</a></span><a href="#auto-instrumentation-with-opentelemetry-java-agent" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
@@ -825,7 +778,11 @@ Make sure you have Tomcat installed on your system. If not, then you can downloa
     <div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>export CATALINA_OPTS="$CATALINA_OPTS -javaagent:/path/opentelemetry-javaagent.jar"export OTEL_EXPORTER_OTLP_ENDPOINT=&lt;IP of CubeApm Backend&gt;:4317export OTEL_RESOURCE_ATTRIBUTES=service.name=&lt;app_name&gt;
+2
+3
+</pre></td><td class="rouge-code"><pre>export CATALINA_OPTS="$CATALINA_OPTS -javaagent:/path/opentelemetry-javaagent.jar"
+export OTEL_EXPORTER_OTLP_ENDPOINT=&lt;IP of CubeApm Backend&gt;:4317
+export OTEL_RESOURCE_ATTRIBUTES=service.name=&lt;app_name&gt;
 </pre></td></tr></tbody></table></code></div>    </div>
 
     <p>In the <code class="language-plaintext highlighter-rouge">CATALINA_OPTS</code> environment variable, you need to replace <code class="language-plaintext highlighter-rouge">path</code> with the path of the folder location where you have saved the OpenTelemetry Java agent downloaded in step 1.</p>
@@ -837,7 +794,11 @@ Make sure you have Tomcat installed on your system. If not, then you can downloa
     <div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>export CATALINA_OPTS="$CATALINA_OPTS -javaagent:/Users/cruxaki/Downloads/opentelemetry-javaagent.jar"export OTEL_EXPORTER_OTLP_ENDPOINT=http://40.76.59.122:4317export OTEL_RESOURCE_ATTRIBUTES=service.name=Tomcat-CubeApm
+2
+3
+</pre></td><td class="rouge-code"><pre>export CATALINA_OPTS="$CATALINA_OPTS -javaagent:/Users/ayush/Downloads/opentelemetry-javaagent.jar"
+export OTEL_EXPORTER_OTLP_ENDPOINT=http://40.76.59.122:4317
+export OTEL_RESOURCE_ATTRIBUTES=service.name=Tomcat-CubeApm
 </pre></td></tr></tbody></table></code></div>    </div>
 
     <p>Make sure that you have saved this file as <code class="language-plaintext highlighter-rouge">setenv.sh</code> and in your Tomcat bin folder, because when starting up, Catalina checks this file for environment variables.</p>
@@ -848,7 +809,9 @@ Make sure you have Tomcat installed on your system. If not, then you can downloa
     <div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>bin/shutdown.shbin/startup.sh
+2
+</pre></td><td class="rouge-code"><pre>bin/shutdown.sh
+bin/startup.sh
 </pre></td></tr></tbody></table></code></div>    </div>
 
     <p>Check out the sample Tomcat app again at  <a href="http://localhost:8080/sample/">http://localhost:8080/sample/</a> and play around with it to generate some load. It might take 1-2 minutes before it starts showing up in the CubeApm dashboard.</p>
@@ -877,13 +840,14 @@ Make sure you have Tomcat installed on your system. If not, then you can downloa
 
 <p>View of traces at a particular timestamp</p>
 
-<p>You can use flamegraphs to identify the issue causing the latency.</p>
+<!-- TODO - Check with Vijay -->
+<!-- You can use flamegraphs to identify the issue causing the latency.
 
-<p>Flamegraphs used for distributed tracing in CubeApm dashboard</p>
+Flamegraphs used for distributed tracing in CubeApm dashboard -->
 
 <h2 id="conclusion"><span class="mr-2">Conclusion<a href="#conclusion" title="Direct link to Conclusion">​</a></span><a href="#conclusion" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p>OpenTelemetry makes it very convenient to instrument your Spring Boot application. You can then use an open-source APM tool like CubeApm to analyze the performance of your app. As CubeApm offers a full-stack observability tool, you don’t have to use multiple tools for your monitoring needs.</p>
+<p>OpenTelemetry makes it very convenient to instrument your Spring Boot application. You can then use an APM tool like CubeApm to analyze the performance of your app. As CubeApm offers a full-stack observability tool, you don’t have to use multiple tools for your monitoring needs.</p>
 
 </div>
 

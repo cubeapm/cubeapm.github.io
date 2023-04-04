@@ -52,7 +52,7 @@
 <meta property="twitter:title" content="OpenTelemetry Nodejs Tutorial with a sample Nodejs app instrumentation" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-02T18:27:15+05:30","datePublished":"2023-04-01T00:00:00+05:30","description":"OpenTelemetry can auto-instrument many common modules for a Javascript application. The telemetry data captured can then be sent to CubeApm for analysis and visualization.","headline":"OpenTelemetry Nodejs Tutorial with a sample Nodejs app instrumentation","mainEntityOfPage":{"@type":"WebPage","@id":"https://cubeapm.github.io/posts/node-tutorial/"},"url":"https://cubeapm.github.io/posts/node-tutorial/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-04T15:45:55+05:30","datePublished":"2023-04-01T00:00:00+05:30","description":"OpenTelemetry can auto-instrument many common modules for a Javascript application. The telemetry data captured can then be sent to CubeApm for analysis and visualization.","headline":"OpenTelemetry Nodejs Tutorial with a sample Nodejs app instrumentation","mainEntityOfPage":{"@type":"WebPage","@id":"https://cubeapm.github.io/posts/node-tutorial/"},"url":"https://cubeapm.github.io/posts/node-tutorial/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -653,10 +653,10 @@
 
 
 <em class=""
-    data-ts="1680440235"
+    data-ts="1680603355"
     data-df="ll"
     data-toggle="tooltip" data-placement="bottom">
-  Apr  2, 2023
+  Apr  4, 2023
 </em>
 
     </span>
@@ -702,7 +702,7 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="871 words">
+  title="752 words">
   <em>4 min</em> read</span>
 
     </div>
@@ -718,9 +718,9 @@
 
 <p>You need to ensure that you have <strong>Node.js version 12 or newer</strong>. You can download the latest version of Node.js <a href="https://nodejs.org/en/download/">here</a>. For the sample application, let’s create a basic ‘hello world’ express.js application.</p>
 
-<p>If you do not want to follow these steps manually, you can directly check out the <a href="https://github.com/CubeApm/sample-nodejs-app">GitHub repo</a> of the sample application. You can run the app directly after cloning it and start sending data to CubeApm. The code is already instrumented with OpenTelemetry libraries.</p>
+<!-- If you do not want to follow these steps manually, you can directly check out the [GitHub repo](https://github.com/CubeApm/sample-nodejs-app) of the sample application. You can run the app directly after cloning it and start sending data to CubeApm. The code is already instrumented with OpenTelemetry libraries. -->
 
-<p>But, it would be better if you follow these steps to understand what’s happening.</p>
+<!-- But, it would be better if you follow these steps to understand what's happening. -->
 
 <p>Check if node is installed on your machine by using the below command:</p>
 
@@ -925,19 +925,19 @@ Now when you run your application, OpenTelemetry captures telemetry data from it
 
 <p>You can then choose a particular timestamp where latency is high to drill down to traces around that timestamp.</p>
 
-<p><em>View of traces at a particular timestamp</em></p>
+<!-- _View of traces at a particular timestamp_ -->
+<!-- TODO - Confirm with Vijay -->
+<!-- You can use flamegraphs to exactly identify the issue causing the latency.
 
-<p>You can use flamegraphs to exactly identify the issue causing the latency.</p>
+_Flamegraphs showing exact duration taken by each spans - a concept of distributed tracing_
 
-<p><em>Flamegraphs showing exact duration taken by each spans - a concept of distributed tracing</em></p>
+You can also use CubeApm for log management. For Nodejs applications, you can use the [winston logger](https://signoz.io/blog/winston-logger/) to send logs to CubeApm.
 
-<p>You can also use CubeApm for log management. For Nodejs applications, you can use the <a href="https://signoz.io/blog/winston-logger/">winston logger</a> to send logs to CubeApm.</p>
-
-<p><em>Logs management in CubeApm</em></p>
+_Logs management in CubeApm_ -->
 
 <h2 id="conclusion"><span class="mr-2">Conclusion<a href="#conclusion" title="Direct link to Conclusion">​</a></span><a href="#conclusion" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p>OpenTelemetry makes it very convenient to instrument your Nodejs application. You can then use an open-source APM tool like CubeApm to analyze the performance of your app. As CubeApm offers a full-stack observability tool, you don’t have to use multiple tools for your monitoring needs.</p>
+<p>OpenTelemetry makes it very convenient to instrument your Nodejs application. You can then use an APM tool like CubeApm to analyze the performance of your app. As CubeApm offers a full-stack observability tool, you don’t have to use multiple tools for your monitoring needs.</p>
 
 </div>
 
