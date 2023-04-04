@@ -112,7 +112,7 @@ About environment variables:
 
 `http://<IP of CubeApm backend>:4318/v1/traces`
 
-note
+**Note**
 
 Remember to allow incoming requests to port 4318 of machine where CubeApm backend is hosted.
 
@@ -125,7 +125,7 @@ You can check your application running at [http://localhost:5555/](http://localh
 
 And, congratulations! You have instrumented your sample Node.js app. You can now access the CubeApm dashboard at [http://localhost:3301](http://localhost:3301) to monitor your app for performance metrics.
 
-_Sample_app in the list of applications monitored_
+<!-- _Sample_app in the list of applications monitored_ -->
 
 ## Metrics, Traces and Logs of the Nodejs application[​](#metrics-traces-and-logs-of-the-nodejs-application "Direct link to Metrics, Traces and Logs of the Nodejs application")
 
