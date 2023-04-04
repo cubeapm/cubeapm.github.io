@@ -27,15 +27,17 @@ OpenTelemetry only generates telemetry data and lets you decide where to send yo
 
 You can get started with CubeApm using just three commands at your terminal.
 
-    git clone -b main https://github.com/CubeApm/CubeApm.gitcd CubeApm/deploy/./install.sh
+    git clone -b main https://github.com/CubeApm/CubeApm.git
+    cd CubeApm/deploy/
+    ./install.sh
 
 For detailed instructions, you can visit our documentation.
 
 When you are done installing CubeApm, you can access the UI at: `http://localhost:3301`
 
-The application list shown in the dashboard is from a sample app called HOT R.O.D that comes bundled with the CubeApm installation package.
+<!-- The application list shown in the dashboard is from a sample app called HOT R.O.D that comes bundled with the CubeApm installation package.
 
-_CubeApm dashboard_
+_CubeApm dashboard_ -->
 
 ## Installing sample Python app[​](#installing-sample-python-app "Direct link to Installing sample Python app")
 
@@ -44,25 +46,28 @@ _CubeApm dashboard_
 1.  **Python 3.4 or newer**  
     If you do not have Python installed on your system, you can download it from the [link](https://www.python.org/downloads/). Check the version of Python using `python3 --version` on your terminal to see if Python is properly installed or not.
 2.  **MongoDB**  
-    If you already have MongoDB services running on your system, you can skip this step.
+     If you already have MongoDB services running on your system, you can skip this step.
 
-    For macOS: [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)
+        For macOS: [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)
 
-    For Linux: [https://docs.mongodb.com/manual/administration/install-on-linux/](https://docs.mongodb.com/manual/administration/install-on-linux/)
+        For Linux: [https://docs.mongodb.com/manual/administration/install-on-linux/](https://docs.mongodb.com/manual/administration/install-on-linux/)
 
-    For Ubuntu: [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
+        For Ubuntu: [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
 
-    For Windows: [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/)
+        For Windows: [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/)
 
-    On MacOS the installation is done using Homebrew's brew package manager. Once the installation is done, don't forget to start MongoDB services using `brew services start mongodb/brew/mongodb-community@4.4`  on your macOS terminal.
+        On MacOS the installation is done using Homebrew's brew package manager. Once the installation is done, don't forget to start MongoDB services using `brew services start mongodb/brew/mongodb-community@4.4`  on your macOS terminal.
 
-    _starting mongoDB services from mac terminal_
+        <!-- _starting mongoDB services from mac terminal_ -->
+
+    <!--
 
 ### Steps to get the Python app up and running[​](#steps-to-get-the-python-app-up-and-running "Direct link to Steps to get the Python app up and running")
 
 1.  Clone sample Flask app repository and go to the root folder
 
-        git clone https://github.com/CubeApm/sample-flask-app.gitcd sample-flask-app
+        git clone https://github.com/CubeApm/sample-flask-app.git
+        cd sample-flask-app
 
 2.  Check if the app is running
 
@@ -72,7 +77,7 @@ _mac terminal commands for running a python app_
 
 You can now access the UI of the app on your local host: http://localhost:5002/
 
-_Python app UI_
+_Python app UI_ -->
 
 ## Instrumentation with OpenTelemetry and sending data to CubeApm[​](#instrumentation-with-opentelemetry-and-sending-data-to-CubeApm "Direct link to Instrumentation with OpenTelemetry and sending data to CubeApm")
 
@@ -100,21 +105,25 @@ _Python app UI_
 
     You need to put these environment variables in the below command.
 
-    note
+    **Note**
 
     Don’t run app in reloader/hot-reload mode as it breaks instrumentation.
 
-        OTEL_RESOURCE_ATTRIBUTES=service.name=<service_name> OTEL_EXPORTER_OTLP_ENDPOINT="http://<IP of CubeApm>:4317" opentelemetry-instrument python3 app.py
+        OTEL_RESOURCE_ATTRIBUTES=service.name=<service_name> OTEL_EXPORTER_OTLP_ENDPOINT="http://<IP of CubeApm>:4317"
+
+        opentelemetry-instrument python3 app.py
 
     As we are running CubeApm on local host, `IP of CubeApm` can be replaced with `localhost` in this case. And, for `service_name` let's use `pythonApp`. Hence, the final command becomes:
 
     **Final Command**
 
-        OTEL_RESOURCE_ATTRIBUTES=service.name=pythonApp OTEL_EXPORTER_OTLP_ENDPOINT="http://localhost:4317" opentelemetry-instrument python3 app.py
+        OTEL_RESOURCE_ATTRIBUTES=service.name=pythonApp OTEL_EXPORTER_OTLP_ENDPOINT="http://localhost:4317"
+
+        opentelemetry-instrument python3 app.py
 
     And, congratulations! You have instrumented your sample Python app. You can now access the CubeApm dashboard at [http://localhost:3301](http://localhost:3301/) to monitor your app for performance metrics.
 
-_CubeApm dashboard showing python app in its list of applications_
+<!-- _CubeApm dashboard showing python app in its list of applications_ -->
 
 ## Metrics and Traces of the Python application[​](#metrics-and-traces-of-the-python-application "Direct link to Metrics and Traces of the Python application")
 
@@ -126,16 +135,16 @@ CubeApm comes with out of box RED metrics charts and visualization. RED metrics 
 - Error rate of requests
 - Duration taken by requests
 
-_CubeApm dashboard showing the popular RED metrics for application performance monitoring_
+<!-- _CubeApm dashboard showing the popular RED metrics for application performance monitoring_ -->
 
 You can then choose a particular timestamp where latency is high to drill down to traces around that timestamp.
 
-_View of traces at a particular timestamp_
+<!-- _View of traces at a particular timestamp_
 
 You can use flamegraphs to exactly identify the issue causing the latency.
 
-_Flamegraphs showing exact duration taken by each spans - a concept of distributed tracing_
+_Flamegraphs showing exact duration taken by each spans - a concept of distributed tracing_ -->
 
 ## Conclusion[​](#conclusion "Direct link to Conclusion")
 
-OpenTelemetry makes it very convenient to instrument your Python application. You can then use an open-source APM tool like CubeApm to analyze the performance of your app. As CubeApm offers a full-stack observability tool, you don't have to use multiple tools for your monitoring needs.
+OpenTelemetry makes it very convenient to instrument your Python application. You can then use an APM tool like CubeApm to analyze the performance of your app. As CubeApm offers a full-stack observability tool, you don't have to use multiple tools for your monitoring needs.

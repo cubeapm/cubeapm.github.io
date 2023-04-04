@@ -11,9 +11,9 @@ OpenTelemetry can auto-instrument many common modules for a Javascript applicati
 
 You need to ensure that you have **Node.js version 12 or newer**. You can download the latest version of Node.js [here](https://nodejs.org/en/download/). For the sample application, let's create a basic 'hello world' express.js application.
 
-If you do not want to follow these steps manually, you can directly check out the [GitHub repo](https://github.com/CubeApm/sample-nodejs-app) of the sample application. You can run the app directly after cloning it and start sending data to CubeApm. The code is already instrumented with OpenTelemetry libraries.
+<!-- If you do not want to follow these steps manually, you can directly check out the [GitHub repo](https://github.com/CubeApm/sample-nodejs-app) of the sample application. You can run the app directly after cloning it and start sending data to CubeApm. The code is already instrumented with OpenTelemetry libraries. -->
 
-But, it would be better if you follow these steps to understand what's happening.
+<!-- But, it would be better if you follow these steps to understand what's happening. -->
 
 Check if node is installed on your machine by using the below command:
 
@@ -141,16 +141,16 @@ _Measure things like application latency, requests per sec, error percentage and
 
 You can then choose a particular timestamp where latency is high to drill down to traces around that timestamp.
 
-_View of traces at a particular timestamp_
-
-You can use flamegraphs to exactly identify the issue causing the latency.
+<!-- _View of traces at a particular timestamp_ -->
+<!-- TODO - Confirm with Vijay -->
+<!-- You can use flamegraphs to exactly identify the issue causing the latency.
 
 _Flamegraphs showing exact duration taken by each spans - a concept of distributed tracing_
 
 You can also use CubeApm for log management. For Nodejs applications, you can use the [winston logger](https://signoz.io/blog/winston-logger/) to send logs to CubeApm.
 
-_Logs management in CubeApm_
+_Logs management in CubeApm_ -->
 
 ## Conclusion[​](#conclusion "Direct link to Conclusion")
 
-OpenTelemetry makes it very convenient to instrument your Nodejs application. You can then use an open-source APM tool like CubeApm to analyze the performance of your app. As CubeApm offers a full-stack observability tool, you don't have to use multiple tools for your monitoring needs.
+OpenTelemetry makes it very convenient to instrument your Nodejs application. You can then use an APM tool like CubeApm to analyze the performance of your app. As CubeApm offers a full-stack observability tool, you don't have to use multiple tools for your monitoring needs.
