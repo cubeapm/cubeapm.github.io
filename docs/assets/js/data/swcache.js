@@ -1,47 +1,47 @@
 const resource = [
     /* --- CSS --- */
-    '/cubeapm/assets/css/style.css',
+    '/docs/assets/css/style.css',
 
     /* --- PWA --- */
-    '/cubeapm/app.js',
-    '/cubeapm/sw.js',
+    '/docs/app.js',
+    '/docs/sw.js',
 
     /* --- HTML --- */
-    '/cubeapm/index.html',
-    '/cubeapm/404.html',
+    '/docs/index.html',
+    '/docs/404.html',
 
     
-        '/cubeapm/categories/',
+        '/docs/categories/',
     
-        '/cubeapm/tags/',
+        '/docs/tags/',
     
-        '/cubeapm/archives/',
+        '/docs/archives/',
     
-        '/cubeapm/about/',
+        '/docs/about/',
     
 
     /* --- Favicons & compressed JS --- */
     
     
-        '/cubeapm/assets/img/favicons/android-chrome-192x192.png',
-        '/cubeapm/assets/img/favicons/android-chrome-512x512.png',
-        '/cubeapm/assets/img/favicons/apple-touch-icon.png',
-        '/cubeapm/assets/img/favicons/favicon-16x16.png',
-        '/cubeapm/assets/img/favicons/favicon-32x32.png',
-        '/cubeapm/assets/img/favicons/favicon.ico',
-        '/cubeapm/assets/img/favicons/mstile-150x150.png',
-        '/cubeapm/assets/js/dist/categories.min.js',
-        '/cubeapm/assets/js/dist/commons.min.js',
-        '/cubeapm/assets/js/dist/misc.min.js',
-        '/cubeapm/assets/js/dist/page.min.js',
-        '/cubeapm/assets/js/dist/post.min.js'
+        '/docs/assets/img/favicons/android-chrome-192x192.png',
+        '/docs/assets/img/favicons/android-chrome-512x512.png',
+        '/docs/assets/img/favicons/apple-touch-icon.png',
+        '/docs/assets/img/favicons/favicon-16x16.png',
+        '/docs/assets/img/favicons/favicon-32x32.png',
+        '/docs/assets/img/favicons/favicon.ico',
+        '/docs/assets/img/favicons/mstile-150x150.png',
+        '/docs/assets/js/dist/categories.min.js',
+        '/docs/assets/js/dist/commons.min.js',
+        '/docs/assets/js/dist/misc.min.js',
+        '/docs/assets/js/dist/page.min.js',
+        '/docs/assets/js/dist/post.min.js'
 ];
 
 /* The request url with below domain will be cached */
 const allowedDomains = [
     
 
-    '',
+    'localhost:4000',
 
     
 

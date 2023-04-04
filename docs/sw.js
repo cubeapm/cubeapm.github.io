@@ -1,6 +1,6 @@
-self.importScripts('/cubeapm/assets/js/data/swcache.js');
+self.importScripts('/docs/assets/js/data/swcache.js');
 
-const cacheName = 'chirpy-20230404.141844';
+const cacheName = 'chirpy-20230404.145735';
 
 function verifyDomain(url) {
     for (const domain of allowedDomains) {

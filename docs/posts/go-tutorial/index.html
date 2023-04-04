@@ -43,8 +43,8 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="OpenTelemetry can be used to generate telemetry data from your Go applications. The collected data can then be sent to an observability tool for storage and visualization. OpenTelemetry is an open-source project under the Cloud Native Computing Foundation (CNCF) that aims to standardize the generation and collection of telemetry data." />
 <meta property="og:description" content="OpenTelemetry can be used to generate telemetry data from your Go applications. The collected data can then be sent to an observability tool for storage and visualization. OpenTelemetry is an open-source project under the Cloud Native Computing Foundation (CNCF) that aims to standardize the generation and collection of telemetry data." />
-<link rel="canonical" href="/cubeapm/posts/go-tutorial/" />
-<meta property="og:url" content="/cubeapm/posts/go-tutorial/" />
+<link rel="canonical" href="http://localhost:4000/docs/posts/go-tutorial/" />
+<meta property="og:url" content="http://localhost:4000/docs/posts/go-tutorial/" />
 <meta property="og:site_name" content="CubeAPM" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-04-01T00:00:00+05:30" />
@@ -52,7 +52,7 @@
 <meta property="twitter:title" content="OpenTelemetry Golang Tutorial with a sample Go app instrumentation" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-02T18:27:15+05:30","datePublished":"2023-04-01T00:00:00+05:30","description":"OpenTelemetry can be used to generate telemetry data from your Go applications. The collected data can then be sent to an observability tool for storage and visualization. OpenTelemetry is an open-source project under the Cloud Native Computing Foundation (CNCF) that aims to standardize the generation and collection of telemetry data.","headline":"OpenTelemetry Golang Tutorial with a sample Go app instrumentation","mainEntityOfPage":{"@type":"WebPage","@id":"/cubeapm/posts/go-tutorial/"},"url":"/cubeapm/posts/go-tutorial/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-02T18:27:15+05:30","datePublished":"2023-04-01T00:00:00+05:30","description":"OpenTelemetry can be used to generate telemetry data from your Go applications. The collected data can then be sent to an observability tool for storage and visualization. OpenTelemetry is an open-source project under the Cloud Native Computing Foundation (CNCF) that aims to standardize the generation and collection of telemetry data.","headline":"OpenTelemetry Golang Tutorial with a sample Go app instrumentation","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/docs/posts/go-tutorial/"},"url":"http://localhost:4000/docs/posts/go-tutorial/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -67,15 +67,15 @@
 
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="/cubeapm/assets/img/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/cubeapm/assets/img/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/cubeapm/assets/img/favicons/favicon-16x16.png">
-<link rel="manifest" href="/cubeapm/assets/img/favicons/site.webmanifest">
-<link rel="shortcut icon" href="/cubeapm/assets/img/favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/docs/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/docs/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/docs/assets/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/docs/assets/img/favicons/site.webmanifest">
+<link rel="shortcut icon" href="/docs/assets/img/favicons/favicon.ico">
 <meta name="apple-mobile-web-app-title" content="CubeAPM">
 <meta name="application-name" content="CubeAPM">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="/cubeapm/assets/img/favicons/browserconfig.xml">
+<meta name="msapplication-config" content="/docs/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
 
@@ -106,7 +106,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css">
 
-  <link rel="stylesheet" href="/cubeapm/assets/css/style.css">
+  <link rel="stylesheet" href="/docs/assets/css/style.css">
 
   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.20.1/dist/tocbot.min.css">
@@ -256,13 +256,13 @@
 <div id="sidebar" class="d-flex flex-column align-items-end">
   <div class="profile-wrapper text-center">
     <div id="avatar">
-      <a href="/cubeapm/" class="mx-auto">
+      <a href="/docs/" class="mx-auto">
         
       </a>
     </div>
 
     <div class="site-title">
-      <a href="/cubeapm/">CubeAPM</a>
+      <a href="/docs/">CubeAPM</a>
     </div>
     <div class="site-subtitle font-italic">All in one monitoring tool</div>
 
@@ -272,7 +272,7 @@
 
     <!-- home -->
     <li class="nav-item">
-      <a href="/cubeapm/" class="nav-link">
+      <a href="/docs/" class="nav-link">
         <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i>
         <span>HOME</span>
       </a>
@@ -280,7 +280,7 @@
     <!-- the real tabs -->
     
     <li class="nav-item">
-      <a href="/cubeapm/categories/" class="nav-link">
+      <a href="/docs/categories/" class="nav-link">
         <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i>
         
 
@@ -289,7 +289,7 @@
     </li> <!-- .nav-item -->
     
     <li class="nav-item">
-      <a href="/cubeapm/tags/" class="nav-link">
+      <a href="/docs/tags/" class="nav-link">
         <i class="fa-fw fas fa-tag ml-xl-3 mr-xl-3 unloaded"></i>
         
 
@@ -298,7 +298,7 @@
     </li> <!-- .nav-item -->
     
     <li class="nav-item">
-      <a href="/cubeapm/archives/" class="nav-link">
+      <a href="/docs/archives/" class="nav-link">
         <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i>
         
 
@@ -307,7 +307,7 @@
     </li> <!-- .nav-item -->
     
     <li class="nav-item">
-      <a href="/cubeapm/about/" class="nav-link">
+      <a href="/docs/about/" class="nav-link">
         <i class="fa-fw fas fa-info-circle ml-xl-3 mr-xl-3 unloaded"></i>
         
 
@@ -391,7 +391,7 @@
       
 
       
-      <a href="/cubeapm/feed.xml" aria-label="rss"
+      <a href="/docs/feed.xml" aria-label="rss"
         
 
         
@@ -427,7 +427,7 @@
 
         
           <span>
-            <a href="/cubeapm/">
+            <a href="/docs/">
               Home
             </a>
           </span>
@@ -1176,7 +1176,7 @@
 
 <p>CubeApm dashboards can be used to track these custom attributes.</p>
 
-<p><a href="/cubeapm/img/blog/2022/05/opentelemetry_go_custom_attributes.webp" class="popup img-link "><img data-src="/cubeapm/img/blog/2022/05/opentelemetry_go_custom_attributes.webp" alt="Custom attributes on CubeApm dashboard" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/docs/img/blog/2022/05/opentelemetry_go_custom_attributes.webp" class="popup img-link "><img data-src="/docs/img/blog/2022/05/opentelemetry_go_custom_attributes.webp" alt="Custom attributes on CubeApm dashboard" class="lazyload" data-proofer-ignore></a></p>
 
 <p><em>Custom attributes can seen under `Tags` section on CubeApm trace detail page</em></p>
 
@@ -1190,7 +1190,7 @@
 
 <p>You can also see these custom events on CubeApm dashboard.</p>
 
-<p><a href="/cubeapm/img/blog/2022/05/opentelemetry_go_events.webp" class="popup img-link "><img data-src="/cubeapm/img/blog/2022/05/opentelemetry_go_events.webp" alt="Custom Events on CubeApm Dashboard" class="lazyload" data-proofer-ignore></a></p>
+<p><a href="/docs/img/blog/2022/05/opentelemetry_go_events.webp" class="popup img-link "><img data-src="/docs/img/blog/2022/05/opentelemetry_go_events.webp" alt="Custom Events on CubeApm Dashboard" class="lazyload" data-proofer-ignore></a></p>
 
 <p><em>Events can be seen under `Events` section on CubeApm trace detail page</em></p>
 
@@ -1237,8 +1237,8 @@
   <div class="post-meta mb-3">
     <i class="far fa-folder-open fa-fw mr-1"></i>
     
-      <a href='/cubeapm/categories/auto-instrumentation/'>Auto-instrumentation</a>,
-      <a href='/cubeapm/categories/go/'>Go</a>
+      <a href='/docs/categories/auto-instrumentation/'>Auto-instrumentation</a>,
+      <a href='/docs/categories/go/'>Go</a>
   </div>
   
 
@@ -1247,10 +1247,10 @@
   <div class="post-tags">
     <i class="fa fa-tags fa-fw mr-1"></i>
       
-      <a href="/cubeapm/tags/go/"
+      <a href="/docs/tags/go/"
           class="post-tag no-text-decoration" >go</a>
       
-      <a href="/cubeapm/tags/autoinstrumentation/"
+      <a href="/docs/tags/autoinstrumentation/"
           class="post-tag no-text-decoration" >autoinstrumentation</a>
       
   </div>
@@ -1286,19 +1286,19 @@
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=OpenTelemetry%20Golang%20%7C%20Tutorial%20with%20a%20sample%20Go%20app%20instrumentation%20-%20CubeAPM&url=%2Fcubeapm%2Fposts%2Fgo-tutorial%2F" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=OpenTelemetry%20Golang%20%7C%20Tutorial%20with%20a%20sample%20Go%20app%20instrumentation%20-%20CubeAPM&url=http%3A%2F%2Flocalhost%3A4000%2Fdocs%2Fposts%2Fgo-tutorial%2F" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=OpenTelemetry%20Golang%20%7C%20Tutorial%20with%20a%20sample%20Go%20app%20instrumentation%20-%20CubeAPM&u=%2Fcubeapm%2Fposts%2Fgo-tutorial%2F" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=OpenTelemetry%20Golang%20%7C%20Tutorial%20with%20a%20sample%20Go%20app%20instrumentation%20-%20CubeAPM&u=http%3A%2F%2Flocalhost%3A4000%2Fdocs%2Fposts%2Fgo-tutorial%2F" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://t.me/share/url?url=%2Fcubeapm%2Fposts%2Fgo-tutorial%2F&text=OpenTelemetry%20Golang%20%7C%20Tutorial%20with%20a%20sample%20Go%20app%20instrumentation%20-%20CubeAPM" data-toggle="tooltip" data-placement="top"
+        <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fdocs%2Fposts%2Fgo-tutorial%2F&text=OpenTelemetry%20Golang%20%7C%20Tutorial%20with%20a%20sample%20Go%20app%20instrumentation%20-%20CubeAPM" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -1353,22 +1353,22 @@
         
         
         
-      <li><a href="/cubeapm/posts/go-tutorial/">OpenTelemetry Golang | Tutorial with a sample Go app instrumentation</a></li>
+      <li><a href="/docs/posts/go-tutorial/">OpenTelemetry Golang | Tutorial with a sample Go app instrumentation</a></li>
       
         
         
         
-      <li><a href="/cubeapm/posts/java-tutorial/">OpenTelemetry Java | Tutorial with a sample Java app instrumentation</a></li>
+      <li><a href="/docs/posts/java-tutorial/">OpenTelemetry Java | Tutorial with a sample Java app instrumentation</a></li>
       
         
         
         
-      <li><a href="/cubeapm/posts/node-tutorial/">OpenTelemetry Nodejs | Tutorial with a sample Nodejs app instrumentation</a></li>
+      <li><a href="/docs/posts/node-tutorial/">OpenTelemetry Nodejs | Tutorial with a sample Nodejs app instrumentation</a></li>
       
         
         
         
-      <li><a href="/cubeapm/posts/python-tutorial/">OpenTelemetry Python | Tutorial with a sample Python app instrumentation</a></li>
+      <li><a href="/docs/posts/python-tutorial/">OpenTelemetry Python | Tutorial with a sample Python app instrumentation</a></li>
       
     </ul>
   </div> <!-- #access-lastmod -->
@@ -1506,19 +1506,19 @@
 
     
       
-      <a class="post-tag" href="/cubeapm/tags/autoinstrumentation/">autoinstrumentation</a>
+      <a class="post-tag" href="/docs/tags/autoinstrumentation/">autoinstrumentation</a>
     
       
-      <a class="post-tag" href="/cubeapm/tags/go/">go</a>
+      <a class="post-tag" href="/docs/tags/go/">go</a>
     
       
-      <a class="post-tag" href="/cubeapm/tags/java/">java</a>
+      <a class="post-tag" href="/docs/tags/java/">java</a>
     
       
-      <a class="post-tag" href="/cubeapm/tags/nodejs/">nodejs</a>
+      <a class="post-tag" href="/docs/tags/nodejs/">nodejs</a>
     
       
-      <a class="post-tag" href="/cubeapm/tags/python/">python</a>
+      <a class="post-tag" href="/docs/tags/python/">python</a>
     
 
     </div>
@@ -1636,7 +1636,7 @@
       
       
       <div class="card">
-        <a href="/cubeapm/posts/java-tutorial/">
+        <a href="/docs/posts/java-tutorial/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1675,7 +1675,7 @@ After capturing tele...
       
       
       <div class="card">
-        <a href="/cubeapm/posts/node-tutorial/">
+        <a href="/docs/posts/node-tutorial/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1714,7 +1714,7 @@ Creating sample Nodejs a...
       
       
       <div class="card">
-        <a href="/cubeapm/posts/python-tutorial/">
+        <a href="/docs/posts/python-tutorial/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1767,7 +1767,7 @@ Creating sample Nodejs a...
   
 
   
-  <a href="/cubeapm/posts/java-tutorial/" class="btn btn-outline-primary"
+  <a href="/docs/posts/java-tutorial/" class="btn btn-outline-primary"
     prompt="Newer">
     <p>OpenTelemetry Java | Tutorial with a sample Java app instrumentation</p>
   </a>
@@ -1924,19 +1924,19 @@ Creating sample Nodejs a...
 
     
       
-      <a class="post-tag" href="/cubeapm/tags/autoinstrumentation/">autoinstrumentation</a>
+      <a class="post-tag" href="/docs/tags/autoinstrumentation/">autoinstrumentation</a>
     
       
-      <a class="post-tag" href="/cubeapm/tags/go/">go</a>
+      <a class="post-tag" href="/docs/tags/go/">go</a>
     
       
-      <a class="post-tag" href="/cubeapm/tags/java/">java</a>
+      <a class="post-tag" href="/docs/tags/java/">java</a>
     
       
-      <a class="post-tag" href="/cubeapm/tags/nodejs/">nodejs</a>
+      <a class="post-tag" href="/docs/tags/nodejs/">nodejs</a>
     
       
-      <a class="post-tag" href="/cubeapm/tags/python/">python</a>
+      <a class="post-tag" href="/docs/tags/python/">python</a>
     
 
     </div>
@@ -2016,7 +2016,7 @@ Creating sample Nodejs a...
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('search-results'),
-  json: '/cubeapm/assets/js/data/search.json',
+  json: '/docs/assets/js/data/search.json',
   searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0">  <a href="{url}">{title}</a>  <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">    {categories}    {tags}  </div>  <p>{snippet}</p></div>',
   noResultsText: '<p class="mt-5">Oops! No results found.</p>',
   templateMiddleware: function(prop, value, template) {
@@ -2151,7 +2151,7 @@ SimpleJekyllSearch({
 
 
 
-<script defer src="/cubeapm/assets/js/dist/post.min.js"></script>
+<script defer src="/docs/assets/js/dist/post.min.js"></script>
 
 
 
