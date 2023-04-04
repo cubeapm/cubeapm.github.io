@@ -52,7 +52,7 @@
 <meta property="twitter:title" content="OpenTelemetry Python Tutorial with a sample Python app instrumentation" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-04T15:45:55+05:30","datePublished":"2023-04-01T00:00:00+05:30","description":"OpenTelemetry is a vendor-agnostic instrumentation library under CNCF. It can be used to instrument your Python applications to generate telemetry data. Let’s learn how it works and see how to visualize that data with CubeApm.","headline":"OpenTelemetry Python Tutorial with a sample Python app instrumentation","mainEntityOfPage":{"@type":"WebPage","@id":"https://cubeapm.github.io/posts/python-tutorial/"},"url":"https://cubeapm.github.io/posts/python-tutorial/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-04T15:54:43+05:30","datePublished":"2023-04-01T00:00:00+05:30","description":"OpenTelemetry is a vendor-agnostic instrumentation library under CNCF. It can be used to instrument your Python applications to generate telemetry data. Let’s learn how it works and see how to visualize that data with CubeApm.","headline":"OpenTelemetry Python Tutorial with a sample Python app instrumentation","mainEntityOfPage":{"@type":"WebPage","@id":"https://cubeapm.github.io/posts/python-tutorial/"},"url":"https://cubeapm.github.io/posts/python-tutorial/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -623,29 +623,6 @@
   
 
   
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-
-    
-
-  
 
   
   
@@ -700,7 +677,7 @@
 
 
 <em class=""
-    data-ts="1680603355"
+    data-ts="1680603883"
     data-df="ll"
     data-toggle="tooltip" data-placement="bottom">
   Apr  4, 2023
@@ -749,7 +726,7 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="815 words">
+  title="733 words">
   <em>4 min</em> read</span>
 
     </div>
@@ -812,66 +789,38 @@ If you do not have Python installed on your system, you can download it from the
     <p><strong>MongoDB</strong><br />
  If you already have MongoDB services running on your system, you can skip this step.</p>
 
-    <div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-</pre></td><td class="rouge-code"><pre>For macOS: [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)
+    <p>For macOS: <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/</a></p>
 
-For Linux: [https://docs.mongodb.com/manual/administration/install-on-linux/](https://docs.mongodb.com/manual/administration/install-on-linux/)
+    <p>For Linux: <a href="https://docs.mongodb.com/manual/administration/install-on-linux/">https://docs.mongodb.com/manual/administration/install-on-linux/</a></p>
 
-For Ubuntu: [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
+    <p>For Ubuntu: <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/</a></p>
 
-For Windows: [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/)
+    <p>For Windows: <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/</a></p>
 
-On MacOS the installation is done using Homebrew's brew package manager. Once the installation is done, don't forget to start MongoDB services using `brew services start mongodb/brew/mongodb-community@4.4`  on your macOS terminal.
-
-&lt;!-- _starting mongoDB services from mac terminal_ --&gt;
-</pre></td></tr></tbody></table></code></div>    </div>
-
-    <p>&lt;!–</p>
+    <p>On MacOS the installation is done using Homebrew’s brew package manager. Once the installation is done, don’t forget to start MongoDB services using <code class="language-plaintext highlighter-rouge">brew services start mongodb/brew/mongodb-community@4.4</code>  on your macOS terminal.</p>
   </li>
 </ol>
 
-<h3 id="steps-to-get-the-python-app-up-and-running"><span class="mr-2">Steps to get the Python app up and running<a href="#steps-to-get-the-python-app-up-and-running" title="Direct link to Steps to get the Python app up and running">​</a></span><a href="#steps-to-get-the-python-app-up-and-running" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<!-- _starting mongoDB services from mac terminal_ -->
 
-<ol>
-  <li>
-    <p>Clone sample Flask app repository and go to the root folder</p>
+<!--
 
-    <div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre>git clone https://github.com/CubeApm/sample-flask-app.git
-cd sample-flask-app
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-  <li>
-    <p>Check if the app is running</p>
+### Steps to get the Python app up and running[​](#steps-to-get-the-python-app-up-and-running "Direct link to Steps to get the Python app up and running")
 
-    <div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>python3 app.py
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-</ol>
+1.  Clone sample Flask app repository and go to the root folder
 
-<p><em>mac terminal commands for running a python app</em></p>
+        git clone https://github.com/CubeApm/sample-flask-app.git
+        cd sample-flask-app
 
-<p>You can now access the UI of the app on your local host: http://localhost:5002/</p>
+2.  Check if the app is running
 
-<p><em>Python app UI</em> –&gt;</p>
+        python3 app.py
+
+_mac terminal commands for running a python app_
+
+You can now access the UI of the app on your local host: http://localhost:5002/
+
+_Python app UI_ -->
 
 <h2 id="instrumentation-with-opentelemetry-and-sending-data-to-cubeapm"><span class="mr-2">Instrumentation with OpenTelemetry and sending data to CubeApm<a href="#instrumentation-with-opentelemetry-and-sending-data-to-CubeApm" title="Direct link to Instrumentation with OpenTelemetry and sending data to CubeApm">​</a></span><a href="#instrumentation-with-opentelemetry-and-sending-data-to-cubeapm" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
@@ -1100,22 +1049,22 @@ _Flamegraphs showing exact duration taken by each spans - a concept of distribut
         
         
         
-      <li><a href="/posts/go-tutorial/">OpenTelemetry Golang | Tutorial with a sample Go app instrumentation</a></li>
-      
-        
-        
-        
-      <li><a href="/posts/java-tutorial/">OpenTelemetry Java | Tutorial with a sample Java app instrumentation</a></li>
-      
-        
-        
-        
       <li><a href="/posts/node-tutorial/">OpenTelemetry Nodejs | Tutorial with a sample Nodejs app instrumentation</a></li>
       
         
         
         
       <li><a href="/posts/python-tutorial/">OpenTelemetry Python | Tutorial with a sample Python app instrumentation</a></li>
+      
+        
+        
+        
+      <li><a href="/posts/go-tutorial/">OpenTelemetry Golang | Tutorial with a sample Go app instrumentation</a></li>
+      
+        
+        
+        
+      <li><a href="/posts/java-tutorial/">OpenTelemetry Java | Tutorial with a sample Java app instrumentation</a></li>
       
     </ul>
   </div> <!-- #access-lastmod -->
