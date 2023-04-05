@@ -47,7 +47,7 @@ jobs:
       #     bundler-cache: true
 
       - name: Build Jekyll
-        uses: helaili/jekyll-action@v2.0.0
+        uses: helaili/jekyll-action@v2
         with:
           args: JEKYLL_ENV=production jekyll build -d "docs"
 
