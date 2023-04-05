@@ -1,11 +1,11 @@
 ---
-title: OpenTelemetry Golang | Tutorial with a sample Go app instrumentation
+title: Test OpenTelemetry Golang | Tutorial with a sample Go app instrumentation
 date: 2023-04-01
 categories: [Auto-instrumentation, Go]
 tags: [go, autoinstrumentation] # TAG names should always be lowercase
 ---
 
-OpenTelemetry can be used to generate telemetry data from your Go applications. The collected data can then be sent to an observability tool for storage and visualization. OpenTelemetry is an open-source project under the Cloud Native Computing Foundation ([CNCF](https://www.cncf.io/)) that aims to standardize the generation and collection of telemetry data.
+Test OpenTelemetry can be used to generate telemetry data from your Go applications. The collected data can then be sent to an observability tool for storage and visualization. OpenTelemetry is an open-source project under the Cloud Native Computing Foundation ([CNCF](https://www.cncf.io/)) that aims to standardize the generation and collection of telemetry data.
 
 In this tutorial, we will use OpenTelemetry Go libraries to instrument a Go application and then visualize it using an observability tool - [CubeApm](https://CubeApm.io/).
 
