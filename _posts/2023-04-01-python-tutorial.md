@@ -23,7 +23,7 @@ OpenTelemetry only generates telemetry data and lets you decide where to send yo
 - Installing sample Python app
 - Instrumentation with OpenTelemetry and sending data to CubeApm
 
-## Installing CubeApm[​](#installing-CubeApm "Direct link to Installing CubeApm")
+## Installing CubeApm[​]
 
 You can get started with CubeApm using just three commands at your terminal.
 
@@ -79,7 +79,7 @@ You can now access the UI of the app on your local host: http://localhost:5002/
 
 _Python app UI_ -->
 
-## Instrumentation with OpenTelemetry and sending data to CubeApm[​](#instrumentation-with-opentelemetry-and-sending-data-to-CubeApm "Direct link to Instrumentation with OpenTelemetry and sending data to CubeApm")
+## Instrumentation with OpenTelemetry and sending data to CubeApm[​]
 
 1.  **Opentelemetry Python instrumentation installation**  
     Your app folder contains a file called requirements.txt. This file contains all the necessary commands to set up OpenTelemetry Python instrumentation. All the mandatory packages required to start the instrumentation are installed with the help of this file. Make sure your path is updated to the root directory of your sample app and run the following command:

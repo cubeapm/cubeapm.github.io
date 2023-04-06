@@ -60,7 +60,7 @@ Steps to get the app set up and running:
 
     Once you are finished checking, exit the application by using `Ctrl + C` on your terminal.
 
-## Set up OpenTelemetry and send data to CubeApm[​](#set-up-opentelemetry-and-send-data-to-signoz "Direct link to Set up OpenTelemetry and send data to CubeApm")
+## Set up OpenTelemetry and send data to CubeApm[​]
 
 1.  **Install OpenTelemetry packages**
     You will need the following OpenTelemetry packages for this sample application.

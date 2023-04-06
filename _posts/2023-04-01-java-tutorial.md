@@ -16,7 +16,7 @@ Steps to get started with OpenTelemetry for Tomcat Java application:
 - Auto Instrumentation with OpenTelemetry Java agent
 - Getting metrics and traces for Tomcat application in CubeApm
 
-## Installing CubeApm[​](#installing-CubeApm "Direct link to Installing CubeApm")
+## Installing CubeApm[​]
 
 You can get started with CubeApm using just three commands at your terminal.
 

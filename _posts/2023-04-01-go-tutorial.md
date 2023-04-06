@@ -11,12 +11,12 @@ In this tutorial, we will use OpenTelemetry Go libraries to instrument a Go appl
 
 Steps to get started with OpenTelemetry for Go applications:
 
-- [Installing CubeApm](#installing-CubeApm)
+- [Installing CubeApm]
 - [Instrumenting a Go application with OpenTelemetry](#instrumenting-a-go-application-with-opentelemetry)
 - [Adding custom attributes and custom events to spans](#adding-custom-attributes-and-custom-events-to-spans)
-- [Monitoring your Go application with CubeApm dashboards](#monitor-your-go-application-with-CubeApm-dashboards)
+- [Monitoring your Go application with CubeApm dashboards](#monitor-your-go-application-with-cubeapm-dashboards)
 
-## Installing CubeApm[​](#installing-CubeApm "Direct link to Installing CubeApm")
+## Installing CubeApm[​]
 
 First, you need to install CubeApm so that OpenTelemetry can send the data to it.
 
@@ -214,7 +214,7 @@ span.AddEvent("This is a sample event", trace.WithAttributes(attribute.Int("pid"
 
 <!-- Events can be seen under `Events` section on CubeApm trace detail page -->
 
-## Monitor your Go application with CubeApm dashboards[​](#monitor-your-go-application-with-CubeApm-dashboards "Direct link to Monitor your Go application with CubeApm dashboards")
+## Monitor your Go application with CubeApm dashboards[​](#monitor-your-go-application-with-cubeapm-dashboards "Direct link to Monitor your Go application with CubeApm dashboards")
 
 With the above steps, you have instrumented your Go application with OpenTelemetry. OpenTelemetry sends the collected data to CubeApm which can be used to store it and visualize it. Let’s see how CubeApm can help you monitor your Go application.
 
