@@ -501,6 +501,25 @@ footer {
   text-align: center;
 }
 
+footer .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+}
+
+footer .group {
+  flex: 1 1 200px;
+}
+
+footer a {
+  display: block;
+}
+
+footer .copyright {
+  margin-top: var(--spacing-lg);
+  color: #aaa;
+}
+
 #contact {
   position: fixed;
   left: 0;
@@ -566,6 +585,37 @@ footer {
 
 #contact.success .success, #contact.error .error {
   display: block;
+}
+
+#terms {
+  background: #ecf0f1;
+}
+
+#terms .content {
+  max-width: 760px;
+  margin: auto;
+}
+
+#terms h1 {
+  font-size: 3em;
+}
+
+#terms h2 {
+  margin-top: var(--spacing-xxl);
+}
+
+#terms h3 {
+  margin-top: var(--spacing-lg);
+}
+
+#not-found {
+  font-size: 2em;
+  background: #ecf0f1;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 

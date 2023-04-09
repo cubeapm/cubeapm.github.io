@@ -14,8 +14,8 @@
   <header>
     <a href="/"><img class="logo" src="/img/logo.svg" alt="logo"/><span class="brand-name">Cube APM</span></a>
     <nav>
-      <a href="/how-it-works.html" class="active">How it works</a>
-      <a href="/install.html">Docs</a>
+      <a href="/how-it-works.html">How it works</a>
+      <a href="/install.html" class="active">Docs</a>
       <a href="/pricing.html">Pricing</a>
       <a class="cta button" href="/install.html">Get Started</a>
     </nav>
@@ -27,40 +27,15 @@
   </header>
   <section id="hero">
     <h1>
-      Richness of traces<br>Efficiency of metrics
+      Ease of setup and maintenance<br>is a key design goal of Cube APM
     </h1>
-    <div class="description">
-      <div class="item traces">
-        Traces capture rich information about individual events. They are very useful in identifying problems when things go wrong. This benefit, though, comes at the cost of huge data volumes that traces generate.
-      </div>
-      <div class="item metrics">
-        Metrics are highly actionable as they represent numerical data. They are also extremely efficient to store and query, but they only contain aggregate information and can't tell about individual events.
-      </div>
-    </div>
-    <h2>
-      <em>
-        Cube integrates the two tightly
-        <br>
-        to get the best of both!
-      </em>
-    </h2>
   </section>
-  <section id="smart-sampling">
-    <h2 class="title">
-      Smart Sampling
+  <section id="differentiator">
+    <h2>
+      We're launching documentation very soon.<br>In the meantime, you can contact us for assistance.
     </h2>
-    <div class="content">
-      <img src="/img/data.svg"/>
-      <div class="text">
-        <p>
-          Cube processes request traces to generate application performance information. Traces, by their very nature, are generated in large volumes, and not all traces are equally useful. Popular observability platforms either store all traces data (downside: hugely increased cost) or do random sampling at the edge (downside: loss of information).
-        </p>
-        <p>
-          Cube process all traces in memory to generate key information and then discards most of the traces, only retaining the ones which may be useful for further analysis (e.g. high latency cases). Thus aggregate metrics are computed over all traces (advantage: aggregate metrics present true picture and are also comparable over time) and a useful subset of traces is retained for deeper analysis.
-        </p>
-        <p>
-          The key difference between random sampling and Cube's Smart Sampling is that Smart Sampling takes into account richer information like latency while making sampling decisions and hence produces a significantly higher signal to noise ratio in sampling. This enables Cube to handle higher incoming traffic while consuming lesser resources.
-      </div>
+    <div class="cta">
+      <a href="#" data-contact><span>Contact Us</span></a>
     </div>
   </section>
   <footer>
