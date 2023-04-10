@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="/css/main.css"/>
 </head>
 <body>
   <header>
@@ -30,12 +30,85 @@
       Ease of setup and maintenance<br>is a key design goal of Cube APM
     </h1>
   </section>
-  <section id="differentiator">
-    <h2>
-      We're launching documentation very soon.<br>In the meantime, you can contact us for assistance.
-    </h2>
-    <div class="cta">
-      <a href="#" data-contact><span>Contact Us</span></a>
+  <section class="article">
+    <div class="content">
+      <p>
+        Cube is written in Go and ReactJS. All the code is packaged in a single binary of ~30 MB size. Cube can handle 10K traces per second on a single machine with just 2 vCPUs and 8 GB memory (<em>tested on AWS t4g.large instance; on demand pricing: $0.0672/hour, i.e., $1.6/day</em>), and can scale linearly with more resources.
+      </p>
+      <p>
+        Please follow the instructions below to download and install Cube. We currently support Linux and Mac platforms.
+      </p>
+      <h2>Install</h2>
+      <p>
+        Run the following command. It downloads and executes the Cube install script.
+      </p>
+      <code class="block">
+        /bin/bash -c "$(curl -fsSL https://downloads.cubeapm.com/latest/install.sh)"
+      </code>
+      <p>
+        The script performs the following tasks:
+      </p>
+      <ol>
+        <li>Detect CPU platform and OS of the host machine and download appropriate Cube binary file.</li>
+        <li>Set up Cube as a service if <code>systemctl</code> is found on the host.</li>
+      </ol>
+      <p>
+        By default, Cube UI is accessible at http://localhost:3125.
+      </p>
+      <h2>Configure</h2>
+      <p>
+        Run <code>cube --help</code> to see a list of available configuration parameters. Cube can be configured through command line arguments, configuration file, or environment variables. In case of environment variables, please prefix (<code>CUBE_</code>) and replace Dots (<code>.</code>) and dashes (<code>-</code>) with underscores (<code>_</code>) in variable names. For example:
+      </p>
+      <code class="block">
+        # command line parameter<br>
+        --metrics.update-interval 30s<br>
+        <br>
+        # configuration file<br>
+        metrics.update-interval=30s<br>
+        <br>
+        # environment variable<br>
+        CUBE_METRICS_UPDATE_INTERVAL=30s<br>
+      </code>
+      <p>
+        If a parameter if specified through multiple means, the following order of preference applies (highest at top):
+      </p>
+      <ol>
+        <li>Command line arguments</li>
+        <li>Environment variables</li>
+        <li>Configuration file</li>
+        <li>Default values set in code</li>
+      </ol>
+      <h2>Telemetry</h2>
+      <p>
+        Cube understands OTLP (Open Telemetry Protocol) natively. It can receive traces over HTTP and gRPC. We recommend using gRPC as it is significantly more bandwidth efficient than HTTP.
+      </p>
+      <p>
+        Open Telemetry official documentation is available at <a href="https://opentelemetry.io/docs/instrumentation/" target="_blank">https://opentelemetry.io/docs/instrumentation/</a>.
+      </p>
+      <p>
+        While Open Telemetry documentation is technically sufficient, we are soon coming up with our own documentation which is optimized to get specific tasks done quickly. In the meantime, you can contact us for assistance. We will be happy to help!
+      </p>
+      <div>
+        <a href="#" class="button" data-contact><span>Contact Us</span></a>
+      </div>
+      <!-- <h2>
+        Advanced Install
+      </h2>
+      <p>
+        Download the appropriate binary from the following links:
+      </p>
+      <h3>Mac</h3>
+      <ul>
+        <li>amd64 (Intel Chip)</li>
+        <li>arm64 (Apple Chip)</li>
+      </ul>
+      <h3>Linux</h3>
+      <ul>
+        <li>amd64 (64-bit Intel/AMD Chip)</li>
+        <li>arm64 (64-bit ARM Chip)</li>
+        <li>386 (32-bit Intel/AMD Chip)</li>
+        <li>arm (32 bit ARM Chip)</li>
+      </ul> -->
     </div>
   </section>
   <footer>
