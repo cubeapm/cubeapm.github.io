@@ -1,3 +1,7 @@
+// window.addEventListener('scroll', () => {
+//   document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+// }, false);
+
 document.querySelector('header .hamburger').addEventListener('click', function(e) {
   document.querySelector('header').classList.toggle('visible');
 });

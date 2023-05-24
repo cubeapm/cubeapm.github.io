@@ -1,5 +1,9 @@
 :root {
+  --theme-color: #1c1f25;
   --blue: #0f62e6;
+  --lightblue: #2870e2;
+  --bg-gray: #ecf0f1;
+  --offwhite: #f6f6f6;
 
   --font-size-xs: .6rem;
   --font-size-sm: .8rem;
@@ -24,6 +28,19 @@
   box-sizing: border-box;
 }
 
+html {
+  background: var(--theme-color);
+}
+
+body {
+  background: var(--theme-color);
+  margin: 0;
+  padding: 0;
+  font-family: Lato, sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+
 a {
   text-decoration: none;
   color: var(--blue);
@@ -46,14 +63,6 @@ ul {
   padding: 0;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Lato, sans-serif;
-  line-height: 1.5;
-  letter-spacing: 0.2px;
-}
-
 button, .button {
   background: var(--blue);
   padding: var(--spacing-sm) var(--spacing-lg);
@@ -63,6 +72,10 @@ button, .button {
   border: none;
   border-radius: 2px;
   cursor: pointer;
+  transition: background .2s;
+}
+button:hover, .button:hover {
+  background: var(--lightblue);
 }
 
 code {
@@ -81,8 +94,9 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #fff;
-  border-bottom: 8px solid #ccc;
+  background: #1c1f25f6;
+  padding: var(--spacing-md);
+  /* backdrop-filter: blur(10px); */
   display: flex;
 }
 
@@ -94,7 +108,7 @@ header .logo {
 
 header .brand-name {
   color: var(--blue);
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-xl);
   font-weight: bold;
   vertical-align: middle;
 }
@@ -105,10 +119,10 @@ header nav {
   top: 0;
   bottom: 0;
   width: 100%;
-  background: #2c3e50;
+  background: var(--theme-color);
   overflow-y: auto;
-  transition: .2s;
   padding: var(--header-height) 0 1px;
+  transition: left .2s;
 }
 header.visible nav {
   left: 0%;
@@ -119,11 +133,10 @@ header nav a {
   font-size: var(--font-size-lg);
   padding: 0 var(--spacing-lg);
   line-height: var(--header-height);
-  transition: .2s;
+  transition: color .2s;
 }
 header nav a:hover, header nav a.active {
-  background: var(--blue);
-  color: #fff;
+  color: var(--offwhite);
 }
 
 header .cta {
@@ -165,8 +178,8 @@ section {
 }
 
 #hero {
-  background: #2c3e50;
-  color: #fff;
+  background: var(--theme-color);
+  color: var(--offwhite);
   text-align: center;
 }
 
@@ -179,7 +192,7 @@ section {
   padding-top: var(--spacing-xxl);
   font-size: 1.5em;
   font-weight: lighter;
-  text-shadow: 0 0 16px #000;
+  /* text-shadow: 0 0 16px #000; */
 }
 
 #hero h2 em {
@@ -210,7 +223,7 @@ section {
 }
 
 #carousel {
-  border: 1px solid #fff;
+  border: 1px solid var(--offwhite);
   width: 800px;
   aspect-ratio: 800/440;
   max-width: 100%;
@@ -342,7 +355,7 @@ section {
 }
 
 #features {
-  background: #ecf0f1;
+  background: var(--bg-gray);
 }
 
 #features .item {
@@ -368,7 +381,7 @@ section {
 }
 
 #smart-sampling {
-  background: #ecf0f1;
+  background: var(--bg-gray);
 }
 
 #smart-sampling h2 {
@@ -397,7 +410,7 @@ section {
 }
 
 #pricing {
-  background: #ecf0f1;
+  background: var(--bg-gray);
   text-align: center;
 }
 
@@ -433,7 +446,7 @@ section {
   padding-bottom:var(--spacing-md);
 }
 #pricing .plan li.gap {
-  padding-top: var(--spacing-md);
+  padding-top: var(--spacing-lg);
 }
 
 #pricing .plan .cta {
@@ -441,10 +454,10 @@ section {
 }
 
 #faqs {
-  background: #1b1b1d;
+  background: #28292a;
   display: flex;
   flex-wrap: wrap;
-  color: #fff;
+  color: var(--offwhite);
 }
 
 #faqs .title {
@@ -507,7 +520,7 @@ section {
 
 footer {
   padding: 32px;
-  background: #2c3e50;
+  background: var(--theme-color);
   color: #eee;
   text-align: center;
 }
@@ -559,7 +572,7 @@ footer .copyright {
 
 #contact .header {
   border-radius: 2px 2px 0 0;
-  background: #ecf0f1;
+  background: var(--bg-gray);
   padding: var(--spacing-md) var(--spacing-xl);
 }
 
@@ -605,7 +618,7 @@ footer .copyright {
 }
 
 .article {
-  background: #ecf0f1;
+  background: var(--bg-gray);
 }
 
 .article .content {
@@ -627,7 +640,7 @@ footer .copyright {
 
 #not-found {
   font-size: 2em;
-  background: #ecf0f1;
+  background: var(--bg-gray);
   min-height: 80vh;
   display: flex;
   align-items: center;
@@ -647,7 +660,7 @@ footer .copyright {
   }
 
   header .cta {
-    margin: 0 var(--spacing-xl) 0 auto;
+    margin: 0 var(--spacing-md) 0 auto;
     align-self: center;
     line-height: unset;
   }
@@ -690,4 +703,4 @@ footer .copyright {
   #faqs .title {
     line-height: 2;
   }
-} 
+}

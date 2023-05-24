@@ -3,12 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cube APM | The Plug n Play APM</title>
+  <meta name="theme-color" content="#1c1f25">
+  <title>Cube APM | Application Performance, well Managed!</title>
   <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css"/>
+  <link rel="stylesheet" href="/css/main.css?v=1"/>
+  <meta property="og:type" content="object" />
+  <meta property="og:site_name" content="CubeAPM" />
+  <meta property="og:title" content="CubeAPM | Application Performance, well Managed!">
+  <meta property="og:image" content="https://cubeapm.com/img/hero2.png">
 </head>
 <body>
   <header>
@@ -33,31 +38,31 @@
   <section class="article">
     <div class="content">
       <p>
-        Cube is written in Go and ReactJS. All the code is packaged in a single binary of ~30 MB size. Cube can handle 10K traces per second on a single machine with just 2 vCPUs and 8 GB memory (<em>tested on AWS t4g.large instance; on demand pricing: $0.0672/hour, i.e., $1.6/day</em>), and can scale linearly with more resources.
+        Cube is written in Go and ReactJS. All the code is packaged in a single binary. Cube can handle 10K traces per second on a single machine with just 2 vCPUs and 8 GB memory (<em>tested on AWS t4g.large instance; on demand pricing: $0.0672/hour, i.e., $1.6/day</em>), and can scale linearly with more resources.
       </p>
       <p>
-        Please follow the instructions below to download and install Cube. We currently support Linux and Mac platforms.
+        Please follow the instructions below to download and install Cube. We support Linux and Mac platforms with 64-bit Intel/AMD/ARM processors.
       </p>
       <h2>Install</h2>
       <p>
         Run the following command. It downloads and executes the Cube install script.
       </p>
       <code class="block">
-        /bin/bash -c "$(curl -fsSL https://downloads.cubeapm.com/latest/install.sh)"
+        sudo /bin/bash -c "$(curl -fsSL https://downloads.cubeapm.com/latest/install.sh)"
       </code>
       <p>
         The script performs the following tasks:
       </p>
       <ol>
         <li>Detect CPU platform and OS of the host machine and download appropriate Cube binary file.</li>
-        <li>Set up Cube as a service if <code>systemctl</code> is found on the host.</li>
+        <li>Set up Cube as a service if <code>systemctl</code> is found on the host. A configuration file is also created at the path <code>/etc/cubeapm/config.properties</code>.</li>
       </ol>
       <p>
-        By default, Cube UI is accessible at http://localhost:3125.
+        <strong>By default, Cube UI is accessible at http://localhost:3125.</strong>
       </p>
       <h2>Configure</h2>
       <p>
-        Run <code>cube --help</code> to see a list of available configuration parameters. Cube can be configured through command line arguments, configuration file, or environment variables. In case of environment variables, please prefix (<code>CUBE_</code>) and replace Dots (<code>.</code>) and dashes (<code>-</code>) with underscores (<code>_</code>) in variable names. For example:
+        Run <code>cube --help</code> to see a list of available configuration parameters. Cube can be configured through command line arguments, configuration file, or environment variables. In case of environment variables, please prefix (<code>CUBE_</code>) and replace dots (<code>.</code>) and dashes (<code>-</code>) with underscores (<code>_</code>) in variable names. For example:
       </p>
       <code class="block">
         # command line parameter<br>
@@ -150,6 +155,6 @@
       </div>
     </div>
   </div>
-  <script src="/js/main.js"></script>
+  <script src="/js/main.js?v=1"></script>
 </body>
 </html>
