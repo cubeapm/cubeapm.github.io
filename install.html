@@ -61,6 +61,7 @@
           support Linux and Mac platforms with 64-bit Intel/AMD/ARM processors.
         </p>
         <h2>Install</h2>
+        <h3>Bare Metal / Virtual Machine</h3>
         <p>
           Run the following command. It downloads and executes the Cube install
           script.
@@ -86,14 +87,49 @@
             >By default, Cube UI is accessible at http://localhost:3125.</strong
           >
         </p>
+        <h3>Docker</h3>
+        <p>
+          Cube is also available as a Docker image. Run the following command to
+          start Cube in a Docker container.
+        </p>
+        <code class="block">
+          docker run -d --name cubeapm \<br />
+          -p 3125:3125 -p 4317:4317 -p 4318:4318 \<br />
+          -v cube_data:/root/data \<br />
+          -v ./config.properties:/etc/cubeapm/config.properties \<br />
+          cubeapm/cubeapm:v1.1.0 \<br />
+          --config-file /etc/cubeapm/config.properties
+        </code>
+        <p>
+          The above command assumes you have a file
+          <code>config.properties</code> in your current working directory. See
+          configuration section below for details on configuration.
+        </p>
+        <h3>Kubernetes</h3>
+        <p>
+          Cube can be deployed on Kubernetes using the official Helm charts.
+        </p>
+        <code class="block">
+          helm repo add cubeapm https://charts.cubeapm.com<br />
+          helm repo update<br />
+          helm install cubeapm cubeapm/cubeapm
+        </code>
+        <p>
+          Please refer to
+          <a target="_blank" href="https://charts.cubeapm.com/charts/cubeapm/"
+            >CubeAPM Helm Chart documentation</a
+          >
+          for details of various configuration parameters available.
+        </p>
         <h2>Configure</h2>
         <p>
           Run <code>cube --help</code> to see a list of available configuration
-          parameters. Cube can be configured through command line arguments,
-          configuration file, or environment variables. In case of environment
-          variables, please prefix (<code>CUBE_</code>) and replace dots
-          (<code>.</code>) and dashes (<code>-</code>) with underscores
-          (<code>_</code>) in variable names. For example:
+          parameters, along with description and examples. Cube can be
+          configured through command line arguments, configuration file, or
+          environment variables. In case of environment variables, please prefix
+          (<code>CUBE_</code>) and replace dots (<code>.</code>) and dashes
+          (<code>-</code>) with underscores (<code>_</code>) in variable names.
+          For example:
         </p>
         <code class="block">
           # command line parameter<br />
@@ -114,6 +150,30 @@
           <li>Environment variables</li>
           <li>Configuration file</li>
           <li>Default values set in code</li>
+        </ol>
+        <h3>Essential Configuration</h3>
+        <p>
+          Cube provides reasonable defaults to configuration parameters wherever
+          possible. However, some parameters do not have reasonable default
+          values and therefore their values must be provided at the time of
+          setup for Cube to start up. Following is a list of such parameters:
+        </p>
+        <ol>
+          <li><code>auth.database.url</code></li>
+          <li><code>auth.key.session</code></li>
+          <li><code>auth.key.tokens</code></li>
+          <li><code>auth.smtp.url</code></li>
+        </ol>
+        <p>
+          In addition, the following configuration parameters have some default
+          value, but it is quite likely that you may need to override them as
+          per your environment for Cube to work properly.
+        </p>
+        <ol>
+          <li><code>auth.smtp.from</code></li>
+          <li><code>auth.sys-admins</code></li>
+          <li><code>base-url</code></li>
+          <li><code>data-dir</code></li>
         </ol>
         <h2>Telemetry</h2>
         <p>
