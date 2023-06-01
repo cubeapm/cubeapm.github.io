@@ -1,112 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1c1f25">
-  <title>Cube APM | Application Performance, well Managed!</title>
-  <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css?v=1"/>
-  <meta property="og:type" content="object" />
-  <meta property="og:site_name" content="CubeAPM" />
-  <meta property="og:title" content="CubeAPM | Application Performance, well Managed!">
-  <meta property="og:image" content="https://cubeapm.com/img/hero2.png">
-</head>
-<body>
-  <header>
-    <a href="/"><img class="logo" src="/img/logo.svg" alt="logo"/><span class="brand-name">Cube APM</span></a>
-    <nav>
-      <a href="/how-it-works.html" class="active">How it works</a>
-      <a href="/install.html">Docs</a>
-      <a href="/pricing.html">Pricing</a>
-      <a class="cta button" href="/install.html">Get Started</a>
-    </nav>
-    <div class="hamburger">
-      <div class="top"></div>
-      <div class="middle"></div>
-      <div class="bottom"></div>
-    </div>
-  </header>
-  <section id="hero">
-    <h1>
-      Richness of traces<br>Efficiency of metrics
-    </h1>
-    <div class="description">
-      <div class="item traces">
-        Traces capture rich information about individual events. They are very useful in identifying problems when things go wrong. This benefit, though, comes at the cost of huge data volumes that traces generate.
-      </div>
-      <div class="item metrics">
-        Metrics are highly actionable as they represent numerical data. They are also extremely efficient to store and query, but they only contain aggregate information and can't tell about individual events.
-      </div>
-    </div>
-    <h2>
-      <em>
-        Cube integrates the two tightly
-        <br>
-        to get the best of both!
-      </em>
-    </h2>
-  </section>
-  <section id="smart-sampling">
-    <h2 class="title">
-      Smart Sampling
-    </h2>
-    <div class="content">
-      <img src="/img/data.svg"/>
-      <div class="text">
-        <p>
-          Cube processes request traces to generate application performance information. Traces, by their very nature, are generated in large volumes, and not all traces are equally useful. Popular observability platforms either store all traces data (downside: hugely increased cost) or do random sampling at the edge (downside: loss of information).
-        </p>
-        <p>
-          Cube process all traces in memory to generate key information and then discards most of the traces, only retaining the ones which may be useful for further analysis (e.g. high latency cases). Thus aggregate metrics are computed over all traces (advantage: aggregate metrics present true picture and are also comparable over time) and a useful subset of traces is retained for deeper analysis.
-        </p>
-        <p>
-          The key difference between random sampling and Cube's Smart Sampling is that Smart Sampling takes into account richer information like latency while making sampling decisions and hence produces a significantly higher signal to noise ratio in sampling. This enables Cube to handle higher incoming traffic while consuming lesser resources.
-      </div>
-    </div>
-  </section>
-  <footer>
-    <div class="links">
-      <div class="group">
-        <a href="/">Home</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1c1f25" />
+    <title>Cube APM | Application Performance, well Managed!</title>
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css?v=1" />
+    <meta property="og:type" content="object" />
+    <meta property="og:site_name" content="CubeAPM" />
+    <meta
+      property="og:title"
+      content="CubeAPM | Application Performance, well Managed!"
+    />
+    <meta property="og:image" content="https://cubeapm.com/img/hero2.png" />
+  </head>
+  <body>
+    <header>
+      <a href="/"
+        ><img class="logo" src="/img/logo.svg" alt="logo" /><span
+          class="brand-name"
+          >Cube APM</span
+        ></a
+      >
+      <nav>
+        <a href="/how-it-works.html" class="active">How it works</a>
         <a href="/install.html">Docs</a>
+        <a href="/pricing.html">Pricing</a>
+        <a class="cta button" href="/install.html">Get Started</a>
+      </nav>
+      <div class="hamburger">
+        <div class="top"></div>
+        <div class="middle"></div>
+        <div class="bottom"></div>
       </div>
-      <div class="group">
-        <a href="//playground.cubeapm.com/" target="_blank">Playground</a>
-        <a href="/install.html">Installation</a>
+    </header>
+    <section id="hero">
+      <h1>Richness of traces<br />Efficiency of metrics</h1>
+      <div class="description">
+        <div class="item traces">
+          Traces capture rich information about individual events. They are very
+          useful in identifying problems when things go wrong. This benefit,
+          though, comes at the cost of huge data volumes that traces generate.
+        </div>
+        <div class="item metrics">
+          Metrics are highly actionable as they represent numerical data. They
+          are also extremely efficient to store and query, but they only contain
+          aggregate information and can't tell about individual events.
+        </div>
       </div>
-      <div class="group">
-        <a href="/terms.html">Terms</a>
-        <a href="/privacy.html">Privacy</a>
-        <a href="#" data-contact>Contact Us</a>
+      <h2>
+        <em>
+          Cube integrates the two tightly
+          <br />
+          to get the best of both!
+        </em>
+      </h2>
+    </section>
+    <section id="smart-sampling">
+      <h2 class="title">Smart Sampling</h2>
+      <div class="content">
+        <img src="/img/data.svg" />
+        <div class="text">
+          <p>
+            Cube processes request traces to generate application performance
+            information. Traces, by their very nature, are generated in large
+            volumes, and not all traces are equally useful. Popular
+            observability platforms either store all traces data (downside:
+            hugely increased cost) or do random sampling at the edge (downside:
+            loss of information).
+          </p>
+          <p>
+            Cube process all traces in memory to generate key information and
+            then discards most of the traces, only retaining the ones which may
+            be useful for further analysis (e.g. high latency cases). Thus
+            aggregate metrics are computed over all traces (advantage: aggregate
+            metrics present true picture and are also comparable over time) and
+            a useful subset of traces is retained for deeper analysis.
+          </p>
+          <p>
+            The key difference between random sampling and Cube's Smart Sampling
+            is that Smart Sampling takes into account richer information like
+            latency while making sampling decisions and hence produces a
+            significantly higher signal to noise ratio in sampling. This enables
+            Cube to handle higher incoming traffic while consuming lesser
+            resources.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="links">
+        <div class="group">
+          <a href="/">Home</a>
+          <a href="/install.html">Docs</a>
+        </div>
+        <div class="group">
+          <a href="//playground.cubeapm.com/" target="_blank">Playground</a>
+          <a href="/install.html">Installation</a>
+        </div>
+        <div class="group">
+          <a href="/terms.html">Terms</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="#" data-contact>Contact Us</a>
+        </div>
+      </div>
+      <div class="copyright">&copy; 2023 Cube APM</div>
+    </footer>
+    <div id="contact">
+      <div class="wrapper">
+        <div class="header">
+          <h1>Contact Us</h1>
+          <p>
+            Please share the following details and we will get back to you soon
+          </p>
+        </div>
+        <div class="body">
+          <form>
+            <label for="contact_name">Name</label>
+            <input type="text" name="name" id="contact_name" />
+            <label for="contact_email">Email</label>
+            <input type="email" name="email" id="contact_email" />
+            <button type="submit">Submit</button>
+          </form>
+          <p class="success">Thank you! We will reach out to you soon.</p>
+          <p class="error">
+            Something went wrong... please write to us at
+            <a href="mailto:contact@spyk.ai">contact@spyk.ai</a>
+          </p>
+        </div>
       </div>
     </div>
-    <div class="copyright">
-      &copy; 2023 Cube APM
-    </div>
-  </footer>
-  <div id="contact">
-    <div class="wrapper">
-      <div class="header">
-        <h1>Contact Us</h1>
-        <p>Please share the following details and we will get back to you soon</p>
-      </div>
-      <div class="body">
-        <form>
-          <label for="contact_name">Name</label>
-          <input type="text" name="name" id="contact_name" />
-          <label for="contact_email">Email</label>
-          <input type="email" name="email" id="contact_email" />
-          <button type="submit">Submit</button>
-        </form>
-        <p class="success">Thank you! We will reach out to you soon.</p>
-        <p class="error">Something went wrong... please write to us at <a href="mailto:contact@spyk.ai">contact@spyk.ai</a></p>
-      </div>
-    </div>
-  </div>
-  <script src="/js/main.js?v=1"></script>
-</body>
+    <script src="/js/main.js?v=1"></script>
+  </body>
 </html>

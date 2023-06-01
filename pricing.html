@@ -1,188 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1c1f25">
-  <title>Cube APM | Application Performance, well Managed!</title>
-  <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css?v=1"/>
-  <meta property="og:type" content="object" />
-  <meta property="og:site_name" content="CubeAPM" />
-  <meta property="og:title" content="CubeAPM | Application Performance, well Managed!">
-  <meta property="og:image" content="https://cubeapm.com/img/hero2.png">
-</head>
-<body>
-  <header>
-    <a href="/"><img class="logo" src="/img/logo.svg" alt="logo"/><span class="brand-name">Cube APM</span></a>
-    <nav>
-      <a href="/how-it-works.html">How it works</a>
-      <a href="/install.html">Docs</a>
-      <a href="/pricing.html" class="active">Pricing</a>
-      <a class="cta button" href="/install.html">Get Started</a>
-    </nav>
-    <div class="hamburger">
-      <div class="top"></div>
-      <div class="middle"></div>
-      <div class="bottom"></div>
-    </div>
-  </header>
-  <section id="hero">
-    <h1>
-      Save 90% on your APM costs
-    </h1>
-    <h2>
-      Cube can process <em>10 K events per second</em>
-      <br>
-      with just <em>2 vCPUs and 8 GiB Memory *</em>
-    </h2>
-    <div class="footnote">* AWS t4g.large instance<br>(on demand pricing: $0.0672/hour)</div>
-  </section>
-  <section id="pricing">
-    <div class="plans">
-      <div class="plan">
-        <h2>Explorer</h2>
-        <h3>Free</h3>
-        <ul>
-          <li>Metrics</li>
-          <li>Traces</li>
-          <li>Dashboards</li>
-          <li>Alerting</li>
-          <li class="gap">Single Instance</li>
-          <li>External Aceess Control</li>
-          <li>Community Support</li>
-          <li class="gap">1-Week Data Retention</li>
-        </ul>
-        <a class="cta button" href="/install.html">Get Started</a>
-      </div>
-      <div class="plan">
-        <h2>Basic</h2>
-        <h3>$499/month</h3>
-        <ul>
-          <li>Metrics</li>
-          <li>Traces</li>
-          <li>Dashboards</li>
-          <li>Alerting</li>
-          <li class="gap">Cluster</li>
-          <li>Role Based Access Control</li>
-          <li>Email Support</li>
-          <li class="gap">3-Months Data Retention</li>
-        </ul>
-        <a class="cta button" href="/install.html">Get Started</a>
-      </div>
-      <div class="plan">
-        <h2>Pro</h2>
-        <h3>$2499/month</h3>
-        <ul>
-          <li>Metrics</li>
-          <li>Traces</li>
-          <li>Dashboards</li>
-          <li>Alerting</li>
-          <li class="gap">Cluster</li>
-          <li>Role Based Access Control</li>
-          <li>Dedicated Account Rep</li>
-          <li class="gap">Unlimited Data Retention</li>
-          <li>Data Backup & Restore</li>
-          <li>Data Export & Import</li>
-        </ul>
-        <a class="cta button" href="/install.html">Get Started</a>
-      </div>
-    </div>
-  </section>
-  <section id="faqs">
-    <h2 class="title">Frequently<br>Asked<br>Questions</h2>
-    <div class="content">
-      <div class="item">
-        <span class="icon"></span>
-        <div class="question">
-          How does Cube pricing work?
-        </div>
-        <div class="answer">
-          <p>
-            Cube works on a fixed subscription fee model, i.e., the pricing does not increase with volume of data processed or the amount of time for which data is retained.
-          </p>
-          <p>
-            Cube also employs Smart Sampling to significantly reduce the infrastructure demand by efficiently identifying high value data and discarding low value data. This allows Cube to run with much lower resource consumption compared to its peers. The infra cost of Cube comes out to ~$0.02/GB, while commercial vendors typically charge upwards of $0.4/GB.
-          </p>
-          <p>
-            Lastly, you also save on data transfer charges imposed by cloud service providers as Cube runs on your infrastructure.
-          </p>
-        </div>
-      </div>
-      <div class="item">
-        <span class="icon"></span>
-        <div class="question">
-          What is Smart Sampling?
-        </div>
-        <div class="answer">
-          <p>
-            Cube processes request traces to generate application performance information. Traces, by their very nature, are generated in large volumes, and not all traces are equally useful. Popular observability platforms either store all traces data (downside: hugely increased cost) or do random sampling at the edge (downside: loss of information).
-          </p>
-          <p>
-            Cube process all traces in memory to generate key information and then discards most of the traces, only retaining the ones which may be useful for further analysis (e.g. high latency cases). Thus aggregate metrics are computed over all traces (advantage: aggregate metrics present true picture and are also comparable over time) and a useful subset of traces is retained for deeper analysis.
-          </p>
-          <p>
-            The key difference between random sampling and Cube's Smart Sampling is that Smart Sampling takes into account richer information like latency while making sampling decisions and hence produces a significantly higher signal to noise ratio in sampling. This enables Cube to handle higher incoming traffic while consuming lesser resources.
-          </p>
-        </div>
-      </div>
-      <div class="item">
-        <span class="icon"></span>
-        <div class="question">
-          What's the easiest way to try Cube?
-        </div>
-        <div class="answer">
-          <p>
-            First, you can explore the interactive <a href="//playground.cubeapm.com/" target="_blank">Cube Playground</a> to get a feel of the platform.
-          <p>
-          <p>
-            To try Cube on your infrastructure, head on to the <a href="/install.html">installation</a> page for guidance. Cube plays fully well with OpenTelemetry, so if you already have OpenTelemetry setup, you can try Cube alongside your current setup without disrupting the current setup in any way. Follow <a href="/install.html">integrate Cube with existing OTel setup</a> for setup instructions.
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <div class="links">
-      <div class="group">
-        <a href="/">Home</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1c1f25" />
+    <title>Cube APM | Application Performance, well Managed!</title>
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css?v=1" />
+    <meta property="og:type" content="object" />
+    <meta property="og:site_name" content="CubeAPM" />
+    <meta
+      property="og:title"
+      content="CubeAPM | Application Performance, well Managed!"
+    />
+    <meta property="og:image" content="https://cubeapm.com/img/hero2.png" />
+  </head>
+  <body>
+    <header>
+      <a href="/"
+        ><img class="logo" src="/img/logo.svg" alt="logo" /><span
+          class="brand-name"
+          >Cube APM</span
+        ></a
+      >
+      <nav>
+        <a href="/how-it-works.html">How it works</a>
         <a href="/install.html">Docs</a>
+        <a href="/pricing.html" class="active">Pricing</a>
+        <a class="cta button" href="/install.html">Get Started</a>
+      </nav>
+      <div class="hamburger">
+        <div class="top"></div>
+        <div class="middle"></div>
+        <div class="bottom"></div>
       </div>
-      <div class="group">
-        <a href="//playground.cubeapm.com/" target="_blank">Playground</a>
-        <a href="/install.html">Installation</a>
+    </header>
+    <section id="hero">
+      <h1>Save 90% on your APM costs</h1>
+      <h2>
+        Cube can process <em>10 K events per second</em>
+        <br />
+        with just <em>2 vCPUs and 8 GiB Memory *</em>
+      </h2>
+      <div class="footnote">
+        * AWS t4g.large instance<br />(on demand pricing: $0.0672/hour)
       </div>
-      <div class="group">
-        <a href="/terms.html">Terms</a>
-        <a href="/privacy.html">Privacy</a>
-        <a href="#" data-contact>Contact Us</a>
+    </section>
+    <section id="pricing">
+      <div class="plans">
+        <div class="plan">
+          <h2>Explorer</h2>
+          <h3>Free</h3>
+          <ul>
+            <li>Metrics</li>
+            <li>Traces</li>
+            <li>Dashboards</li>
+            <li>Alerting</li>
+            <li class="gap">Single Instance</li>
+            <li>External Aceess Control</li>
+            <li>Community Support</li>
+            <li class="gap">1-Week Data Retention</li>
+          </ul>
+          <a class="cta button" href="/install.html">Get Started</a>
+        </div>
+        <div class="plan">
+          <h2>Basic</h2>
+          <h3>$499/month</h3>
+          <ul>
+            <li>Metrics</li>
+            <li>Traces</li>
+            <li>Dashboards</li>
+            <li>Alerting</li>
+            <li class="gap">Cluster</li>
+            <li>Role Based Access Control</li>
+            <li>Email Support</li>
+            <li class="gap">3-Months Data Retention</li>
+          </ul>
+          <a class="cta button" href="/install.html">Get Started</a>
+        </div>
+        <div class="plan">
+          <h2>Pro</h2>
+          <h3>$2499/month</h3>
+          <ul>
+            <li>Metrics</li>
+            <li>Traces</li>
+            <li>Dashboards</li>
+            <li>Alerting</li>
+            <li class="gap">Cluster</li>
+            <li>Role Based Access Control</li>
+            <li>Dedicated Account Rep</li>
+            <li class="gap">Unlimited Data Retention</li>
+            <li>Data Backup & Restore</li>
+            <li>Data Export & Import</li>
+          </ul>
+          <a class="cta button" href="/install.html">Get Started</a>
+        </div>
+      </div>
+    </section>
+    <section id="faqs">
+      <h2 class="title">Frequently<br />Asked<br />Questions</h2>
+      <div class="content">
+        <div class="item">
+          <span class="icon"></span>
+          <div class="question">How does Cube pricing work?</div>
+          <div class="answer">
+            <p>
+              Cube works on a fixed subscription fee model, i.e., the pricing
+              does not increase with volume of data processed or the amount of
+              time for which data is retained.
+            </p>
+            <p>
+              Cube also employs Smart Sampling to significantly reduce the
+              infrastructure demand by efficiently identifying high value data
+              and discarding low value data. This allows Cube to run with much
+              lower resource consumption compared to its peers. The infra cost
+              of Cube comes out to ~$0.02/GB, while commercial vendors typically
+              charge upwards of $0.4/GB.
+            </p>
+            <p>
+              Lastly, you also save on data transfer charges imposed by cloud
+              service providers as Cube runs on your infrastructure.
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <span class="icon"></span>
+          <div class="question">What is Smart Sampling?</div>
+          <div class="answer">
+            <p>
+              Cube processes request traces to generate application performance
+              information. Traces, by their very nature, are generated in large
+              volumes, and not all traces are equally useful. Popular
+              observability platforms either store all traces data (downside:
+              hugely increased cost) or do random sampling at the edge
+              (downside: loss of information).
+            </p>
+            <p>
+              Cube process all traces in memory to generate key information and
+              then discards most of the traces, only retaining the ones which
+              may be useful for further analysis (e.g. high latency cases). Thus
+              aggregate metrics are computed over all traces (advantage:
+              aggregate metrics present true picture and are also comparable
+              over time) and a useful subset of traces is retained for deeper
+              analysis.
+            </p>
+            <p>
+              The key difference between random sampling and Cube's Smart
+              Sampling is that Smart Sampling takes into account richer
+              information like latency while making sampling decisions and hence
+              produces a significantly higher signal to noise ratio in sampling.
+              This enables Cube to handle higher incoming traffic while
+              consuming lesser resources.
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <span class="icon"></span>
+          <div class="question">What's the easiest way to try Cube?</div>
+          <div class="answer">
+            <p>
+              First, you can explore the interactive
+              <a href="//playground.cubeapm.com/" target="_blank"
+                >Cube Playground</a
+              >
+              to get a feel of the platform.
+            </p>
+
+            <p></p>
+            <p>
+              To try Cube on your infrastructure, head on to the
+              <a href="/install.html">installation</a> page for guidance. Cube
+              plays fully well with OpenTelemetry, so if you already have
+              OpenTelemetry setup, you can try Cube alongside your current setup
+              without disrupting the current setup in any way. Follow
+              <a href="/install.html"
+                >integrate Cube with existing OTel setup</a
+              >
+              for setup instructions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="links">
+        <div class="group">
+          <a href="/">Home</a>
+          <a href="/install.html">Docs</a>
+        </div>
+        <div class="group">
+          <a href="//playground.cubeapm.com/" target="_blank">Playground</a>
+          <a href="/install.html">Installation</a>
+        </div>
+        <div class="group">
+          <a href="/terms.html">Terms</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="#" data-contact>Contact Us</a>
+        </div>
+      </div>
+      <div class="copyright">&copy; 2023 Cube APM</div>
+    </footer>
+    <div id="contact">
+      <div class="wrapper">
+        <div class="header">
+          <h1>Contact Us</h1>
+          <p>
+            Please share the following details and we will get back to you soon
+          </p>
+        </div>
+        <div class="body">
+          <form>
+            <label for="contact_name">Name</label>
+            <input type="text" name="name" id="contact_name" />
+            <label for="contact_email">Email</label>
+            <input type="email" name="email" id="contact_email" />
+            <button type="submit">Submit</button>
+          </form>
+          <p class="success">Thank you! We will reach out to you soon.</p>
+          <p class="error">
+            Something went wrong... please write to us at
+            <a href="mailto:contact@spyk.ai">contact@spyk.ai</a>
+          </p>
+        </div>
       </div>
     </div>
-    <div class="copyright">
-      &copy; 2023 Cube APM
-    </div>
-  </footer>
-  <div id="contact">
-    <div class="wrapper">
-      <div class="header">
-        <h1>Contact Us</h1>
-        <p>Please share the following details and we will get back to you soon</p>
-      </div>
-      <div class="body">
-        <form>
-          <label for="contact_name">Name</label>
-          <input type="text" name="name" id="contact_name" />
-          <label for="contact_email">Email</label>
-          <input type="email" name="email" id="contact_email" />
-          <button type="submit">Submit</button>
-        </form>
-        <p class="success">Thank you! We will reach out to you soon.</p>
-        <p class="error">Something went wrong... please write to us at <a href="mailto:contact@spyk.ai">contact@spyk.ai</a></p>
-      </div>
-    </div>
-  </div>
-  <script src="/js/main.js?v=1"></script>
-</body>
+    <script src="/js/main.js?v=1"></script>
+  </body>
 </html>

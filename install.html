@@ -1,102 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1c1f25">
-  <title>Cube APM | Application Performance, well Managed!</title>
-  <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css?v=1"/>
-  <meta property="og:type" content="object" />
-  <meta property="og:site_name" content="CubeAPM" />
-  <meta property="og:title" content="CubeAPM | Application Performance, well Managed!">
-  <meta property="og:image" content="https://cubeapm.com/img/hero2.png">
-</head>
-<body>
-  <header>
-    <a href="/"><img class="logo" src="/img/logo.svg" alt="logo"/><span class="brand-name">Cube APM</span></a>
-    <nav>
-      <a href="/how-it-works.html">How it works</a>
-      <a href="/install.html" class="active">Docs</a>
-      <a href="/pricing.html">Pricing</a>
-      <a class="cta button" href="/install.html">Get Started</a>
-    </nav>
-    <div class="hamburger">
-      <div class="top"></div>
-      <div class="middle"></div>
-      <div class="bottom"></div>
-    </div>
-  </header>
-  <section id="hero">
-    <h1>
-      Ease of setup and maintenance<br>is a key design goal of Cube APM
-    </h1>
-  </section>
-  <section class="article">
-    <div class="content">
-      <p>
-        Cube is written in Go and ReactJS. All the code is packaged in a single binary. Cube can handle 10K traces per second on a single machine with just 2 vCPUs and 8 GB memory (<em>tested on AWS t4g.large instance; on demand pricing: $0.0672/hour, i.e., $1.6/day</em>), and can scale linearly with more resources.
-      </p>
-      <p>
-        Please follow the instructions below to download and install Cube. We support Linux and Mac platforms with 64-bit Intel/AMD/ARM processors.
-      </p>
-      <h2>Install</h2>
-      <p>
-        Run the following command. It downloads and executes the Cube install script.
-      </p>
-      <code class="block">
-        sudo /bin/bash -c "$(curl -fsSL https://downloads.cubeapm.com/latest/install.sh)"
-      </code>
-      <p>
-        The script performs the following tasks:
-      </p>
-      <ol>
-        <li>Detect CPU platform and OS of the host machine and download appropriate Cube binary file.</li>
-        <li>Set up Cube as a service if <code>systemctl</code> is found on the host. A configuration file is also created at the path <code>/etc/cubeapm/config.properties</code>.</li>
-      </ol>
-      <p>
-        <strong>By default, Cube UI is accessible at http://localhost:3125.</strong>
-      </p>
-      <h2>Configure</h2>
-      <p>
-        Run <code>cube --help</code> to see a list of available configuration parameters. Cube can be configured through command line arguments, configuration file, or environment variables. In case of environment variables, please prefix (<code>CUBE_</code>) and replace dots (<code>.</code>) and dashes (<code>-</code>) with underscores (<code>_</code>) in variable names. For example:
-      </p>
-      <code class="block">
-        # command line parameter<br>
-        --metrics.update-interval 30s<br>
-        <br>
-        # configuration file<br>
-        metrics.update-interval=30s<br>
-        <br>
-        # environment variable<br>
-        CUBE_METRICS_UPDATE_INTERVAL=30s<br>
-      </code>
-      <p>
-        If a parameter if specified through multiple means, the following order of preference applies (highest at top):
-      </p>
-      <ol>
-        <li>Command line arguments</li>
-        <li>Environment variables</li>
-        <li>Configuration file</li>
-        <li>Default values set in code</li>
-      </ol>
-      <h2>Telemetry</h2>
-      <p>
-        Cube understands OTLP (Open Telemetry Protocol) natively. It can receive traces over HTTP and gRPC. We recommend using gRPC as it is significantly more bandwidth efficient than HTTP.
-      </p>
-      <p>
-        Open Telemetry official documentation is available at <a href="https://opentelemetry.io/docs/instrumentation/" target="_blank">https://opentelemetry.io/docs/instrumentation/</a>.
-      </p>
-      <p>
-        While Open Telemetry documentation is technically sufficient, we are soon coming up with our own documentation which is optimized to get specific tasks done quickly. In the meantime, you can contact us for assistance. We will be happy to help!
-      </p>
-      <div>
-        <a href="#" class="button" data-contact><span>Contact Us</span></a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1c1f25" />
+    <title>Cube APM | Application Performance, well Managed!</title>
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css?v=1" />
+    <meta property="og:type" content="object" />
+    <meta property="og:site_name" content="CubeAPM" />
+    <meta
+      property="og:title"
+      content="CubeAPM | Application Performance, well Managed!"
+    />
+    <meta property="og:image" content="https://cubeapm.com/img/hero2.png" />
+  </head>
+  <body>
+    <header>
+      <a href="/"
+        ><img class="logo" src="/img/logo.svg" alt="logo" /><span
+          class="brand-name"
+          >Cube APM</span
+        ></a
+      >
+      <nav>
+        <a href="/how-it-works.html">How it works</a>
+        <a href="/install.html" class="active">Docs</a>
+        <a href="/pricing.html">Pricing</a>
+        <a class="cta button" href="/install.html">Get Started</a>
+      </nav>
+      <div class="hamburger">
+        <div class="top"></div>
+        <div class="middle"></div>
+        <div class="bottom"></div>
       </div>
-      <!-- <h2>
+    </header>
+    <section id="hero">
+      <h1>
+        Ease of setup and maintenance<br />is a key design goal of Cube APM
+      </h1>
+    </section>
+    <section class="article">
+      <div class="content">
+        <p>
+          Cube is written in Go and ReactJS. All the code is packaged in a
+          single binary. Cube can handle 10K traces per second on a single
+          machine with just 2 vCPUs and 8 GB memory (<em
+            >tested on AWS t4g.large instance; on demand pricing: $0.0672/hour,
+            i.e., $1.6/day</em
+          >), and can scale linearly with more resources.
+        </p>
+        <p>
+          Please follow the instructions below to download and install Cube. We
+          support Linux and Mac platforms with 64-bit Intel/AMD/ARM processors.
+        </p>
+        <h2>Install</h2>
+        <p>
+          Run the following command. It downloads and executes the Cube install
+          script.
+        </p>
+        <code class="block">
+          sudo /bin/bash -c "$(curl -fsSL
+          https://downloads.cubeapm.com/latest/install.sh)"
+        </code>
+        <p>The script performs the following tasks:</p>
+        <ol>
+          <li>
+            Detect CPU platform and OS of the host machine and download
+            appropriate Cube binary file.
+          </li>
+          <li>
+            Set up Cube as a service if <code>systemctl</code> is found on the
+            host. A configuration file is also created at the path
+            <code>/etc/cubeapm/config.properties</code>.
+          </li>
+        </ol>
+        <p>
+          <strong
+            >By default, Cube UI is accessible at http://localhost:3125.</strong
+          >
+        </p>
+        <h2>Configure</h2>
+        <p>
+          Run <code>cube --help</code> to see a list of available configuration
+          parameters. Cube can be configured through command line arguments,
+          configuration file, or environment variables. In case of environment
+          variables, please prefix (<code>CUBE_</code>) and replace dots
+          (<code>.</code>) and dashes (<code>-</code>) with underscores
+          (<code>_</code>) in variable names. For example:
+        </p>
+        <code class="block">
+          # command line parameter<br />
+          --metrics.update-interval 30s<br />
+          <br />
+          # configuration file<br />
+          metrics.update-interval=30s<br />
+          <br />
+          # environment variable<br />
+          CUBE_METRICS_UPDATE_INTERVAL=30s<br />
+        </code>
+        <p>
+          If a parameter if specified through multiple means, the following
+          order of preference applies (highest at top):
+        </p>
+        <ol>
+          <li>Command line arguments</li>
+          <li>Environment variables</li>
+          <li>Configuration file</li>
+          <li>Default values set in code</li>
+        </ol>
+        <h2>Telemetry</h2>
+        <p>
+          Cube understands OTLP (Open Telemetry Protocol) natively. It can
+          receive traces over HTTP and gRPC. We recommend using gRPC as it is
+          significantly more bandwidth efficient than HTTP.
+        </p>
+        <p>
+          Open Telemetry official documentation is available at
+          <a
+            href="https://opentelemetry.io/docs/instrumentation/"
+            target="_blank"
+            >https://opentelemetry.io/docs/instrumentation/</a
+          >.
+        </p>
+        <p>
+          While Open Telemetry documentation is technically sufficient, we are
+          soon coming up with our own documentation which is optimized to get
+          specific tasks done quickly. In the meantime, you can contact us for
+          assistance. We will be happy to help!
+        </p>
+        <div>
+          <a href="#" class="button" data-contact><span>Contact Us</span></a>
+        </div>
+        <!-- <h2>
         Advanced Install
       </h2>
       <p>
@@ -114,47 +156,50 @@
         <li>386 (32-bit Intel/AMD Chip)</li>
         <li>arm (32 bit ARM Chip)</li>
       </ul> -->
+      </div>
+    </section>
+    <footer>
+      <div class="links">
+        <div class="group">
+          <a href="/">Home</a>
+          <a href="/install.html">Docs</a>
+        </div>
+        <div class="group">
+          <a href="//playground.cubeapm.com/" target="_blank">Playground</a>
+          <a href="/install.html">Installation</a>
+        </div>
+        <div class="group">
+          <a href="/terms.html">Terms</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="#" data-contact>Contact Us</a>
+        </div>
+      </div>
+      <div class="copyright">&copy; 2023 Cube APM</div>
+    </footer>
+    <div id="contact">
+      <div class="wrapper">
+        <div class="header">
+          <h1>Contact Us</h1>
+          <p>
+            Please share the following details and we will get back to you soon
+          </p>
+        </div>
+        <div class="body">
+          <form>
+            <label for="contact_name">Name</label>
+            <input type="text" name="name" id="contact_name" />
+            <label for="contact_email">Email</label>
+            <input type="email" name="email" id="contact_email" />
+            <button type="submit">Submit</button>
+          </form>
+          <p class="success">Thank you! We will reach out to you soon.</p>
+          <p class="error">
+            Something went wrong... please write to us at
+            <a href="mailto:contact@spyk.ai">contact@spyk.ai</a>
+          </p>
+        </div>
+      </div>
     </div>
-  </section>
-  <footer>
-    <div class="links">
-      <div class="group">
-        <a href="/">Home</a>
-        <a href="/install.html">Docs</a>
-      </div>
-      <div class="group">
-        <a href="//playground.cubeapm.com/" target="_blank">Playground</a>
-        <a href="/install.html">Installation</a>
-      </div>
-      <div class="group">
-        <a href="/terms.html">Terms</a>
-        <a href="/privacy.html">Privacy</a>
-        <a href="#" data-contact>Contact Us</a>
-      </div>
-    </div>
-    <div class="copyright">
-      &copy; 2023 Cube APM
-    </div>
-  </footer>
-  <div id="contact">
-    <div class="wrapper">
-      <div class="header">
-        <h1>Contact Us</h1>
-        <p>Please share the following details and we will get back to you soon</p>
-      </div>
-      <div class="body">
-        <form>
-          <label for="contact_name">Name</label>
-          <input type="text" name="name" id="contact_name" />
-          <label for="contact_email">Email</label>
-          <input type="email" name="email" id="contact_email" />
-          <button type="submit">Submit</button>
-        </form>
-        <p class="success">Thank you! We will reach out to you soon.</p>
-        <p class="error">Something went wrong... please write to us at <a href="mailto:contact@spyk.ai">contact@spyk.ai</a></p>
-      </div>
-    </div>
-  </div>
-  <script src="/js/main.js?v=1"></script>
-</body>
+    <script src="/js/main.js?v=1"></script>
+  </body>
 </html>
