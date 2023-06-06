@@ -175,6 +175,150 @@
           <li><code>base-url</code></li>
           <li><code>data-dir</code></li>
         </ol>
+        <a name="google-oauth"></a>
+        <h3>Sign in with Google</h3>
+        <p>
+          To enable Sign in with Google, you need to create an OAuth app in your
+          Google Workspace account. The following steps guide you through the
+          process:
+        </p>
+        <ol>
+          <li>
+            Go to
+            <a
+              href="https://console.cloud.google.com/"
+              target="_blank"
+              rel="noreferrer"
+              >Google Cloud Console</a
+            >
+            →
+            <a
+              href="https://console.cloud.google.com/apis/"
+              target="_blank"
+              rel="noreferrer"
+              >APIs & Services</a
+            >.
+          </li>
+          <li>
+            Using the project dropdown menu, create a new project with the name
+            <strong>CubeAPM</strong>.
+          </li>
+          <li>
+            Go to
+            <a
+              href="https://console.cloud.google.com/apis/credentials/consent"
+              target="_blank"
+              rel="noreferrer"
+              >OAuth consent screen</a
+            >, and fill the following:
+            <ul>
+              <li><strong>Application type</strong>: Internal</li>
+              <li><strong>Application name</strong>: CubeAPM</li>
+              <li><strong>User support email</strong>: Your email address</li>
+              <li>
+                <strong>Application home page</strong>: Address at which CubeAPM
+                is accessible in your environment, e.g.,
+                https://cubeapm.yourdomain.com/
+              </li>
+              <li>
+                <strong>Authorised domains</strong>: Your primary domain, e.g.,
+                yourdomain.com
+              </li>
+              <li>
+                <strong>Developer email addresses</strong>: Your email address
+              </li>
+            </ul>
+          </li>
+          <li>
+            Go to next screen (Scopes), click on
+            <strong>Add or Remove Scopes</strong>, and add the following scopes:
+            <ul>
+              <li><code>.../auth/userinfo.email</code></li>
+              <li><code>.../auth/userinfo.profile</code></li>
+            </ul>
+          </li>
+          <li>Go to next screen, and review the information provided.</li>
+          <li>
+            Go to
+            <a
+              href="https://console.cloud.google.com/apis/credentials"
+              target="_blank"
+              rel="noreferrer"
+              >Credentials</a
+            >, and click on <strong>Create Credentials</strong> →
+            <strong>OAuth client ID</strong>. Fill the following:
+            <ul>
+              <li><strong>Application type</strong>: Web application</li>
+              <li><strong>Name</strong>: CubeAPM</li>
+              <li>
+                <strong>Authorised redirect URIs</strong>:
+                <code
+                  >&lt;cube_apm_address&gt;/api/auth/self-service/methods/oidc/callback/google</code
+                >, e.g.,
+                https://cubeapm.yourdomain.com/api/auth/self-service/methods/oidc/callback/google
+              </li>
+            </ul>
+          </li>
+          <li>
+            Save the configuration and copy the Client ID and Client secret.
+          </li>
+          <li>
+            The above Client ID and Client Secret can be provided to CubeAPM to
+            enable Sign in with Google.
+          </li>
+        </ol>
+        <a name="github-app"></a>
+        <h3>Sign in with GitHub</h3>
+        <p>
+          To enable Sign in with GitHub, you need to create a GitHub app in your
+          GitHub organization. The following steps guide you through the
+          process:
+        </p>
+        <ol>
+          <li>
+            Go to Create GitHub app page for your organization
+            (https://github.com/organizations/&lt;org_name&gt;/settings/apps/new).
+            Fill in the following:
+            <ul>
+              <li><strong>GitHub App name</strong>: CubeAPM</li>
+              <li>
+                <strong>Homepage URL</strong>: Address at which CubeAPM is
+                accessible in your environment, e.g.,
+                https://cubeapm.yourdomain.com/
+              </li>
+              <li>
+                <strong>Callback URL</strong>:
+                <code
+                  >&lt;cube_apm_address&gt;/api/auth/self-service/methods/oidc/callback/github</code
+                >, e.g.,
+                https://cubeapm.yourdomain.com/api/auth/self-service/methods/oidc/callback/github
+              </li>
+            </ul>
+          </li>
+          <li>
+            Uncheck <strong>Webhook</strong> → <strong>Active</strong> (CubeAPM
+            does not need WebHook access).
+          </li>
+          <li>
+            Change <strong>Permissions</strong> →
+            <strong>Account permissions</strong> →
+            <strong>Email addresses</strong> from
+            <code>Access: No access</code> to <code>Access: Read-only</code>.
+          </li>
+          <li>
+            Set <strong>Where can this GitHub App be installed?</strong> to
+            <strong>Only on this account</strong>.
+          </li>
+          <li>Click <strong>Create GitHub App</strong>.</li>
+          <li>
+            Click <strong>Generate a new client secret</strong>. Copy the Client
+            ID and Client secret.
+          </li>
+          <li>
+            The above Client ID and Client Secret can be provided to CubeAPM to
+            enable Sign in with Google.
+          </li>
+        </ol>
         <h2>Telemetry</h2>
         <p>
           Cube understands OTLP (Open Telemetry Protocol) natively. It can
@@ -198,24 +342,6 @@
         <div>
           <a href="#" class="button" data-contact><span>Contact Us</span></a>
         </div>
-        <!-- <h2>
-        Advanced Install
-      </h2>
-      <p>
-        Download the appropriate binary from the following links:
-      </p>
-      <h3>Mac</h3>
-      <ul>
-        <li>amd64 (Intel Chip)</li>
-        <li>arm64 (Apple Chip)</li>
-      </ul>
-      <h3>Linux</h3>
-      <ul>
-        <li>amd64 (64-bit Intel/AMD Chip)</li>
-        <li>arm64 (64-bit ARM Chip)</li>
-        <li>386 (32-bit Intel/AMD Chip)</li>
-        <li>arm (32 bit ARM Chip)</li>
-      </ul> -->
       </div>
     </section>
     <footer>
