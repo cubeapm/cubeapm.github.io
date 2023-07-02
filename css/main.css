@@ -279,7 +279,6 @@ section {
 #intro {
   border: 1px solid #999;
   width: 802px;
-  height: 502px;
   max-width: 100%;
   margin: var(--spacing-xxxl) auto var(--spacing-lg);
   overflow: hidden;
@@ -287,10 +286,9 @@ section {
 
 #intro video {
   display: block;
-  width: 800px;
+  width: 100%;
   aspect-ratio: 800/520;
-  max-width: 100%;
-  margin-top: -20px;
+  margin-top: -2.5%;
 }
 
 #differentiator {
