@@ -276,6 +276,23 @@ section {
   width: 100%;
 }
 
+#intro {
+  border: 1px solid #999;
+  width: 802px;
+  height: 502px;
+  max-width: 100%;
+  margin: var(--spacing-xxxl) auto var(--spacing-lg);
+  overflow: hidden;
+}
+
+#intro video {
+  display: block;
+  width: 800px;
+  aspect-ratio: 800/520;
+  max-width: 100%;
+  margin-top: -20px;
+}
+
 #differentiator {
   text-align: center;
   background: #fcfcfc;
